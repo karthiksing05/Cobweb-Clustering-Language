@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=twenty_newsgroups_topic_modeling
-#SBATCH --time=24:00:00
+#SBATCH --time=5:00:00
 #SBATCH --mem=24G
 #SBATCH --gpus-per-node=a40
 #SBATCH --exclude=spot,heistotron

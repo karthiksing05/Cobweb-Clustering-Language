@@ -20,7 +20,7 @@ class TwentyNewsgroupsDataset(BERTopicDataset):
 	@classmethod
 	def load(
 		cls,
-		subset: str = "train",
+		subset: str = "test",
 		categories: Optional[Sequence[str]] = None,
 		remove_headers: bool = True,
 		max_docs: Optional[int] = None,

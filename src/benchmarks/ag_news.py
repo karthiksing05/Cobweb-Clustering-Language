@@ -18,7 +18,7 @@ class AGNewsDataset(BERTopicDataset):
 	@classmethod
 	def load(
 		cls,
-		split: str = "train",
+		split: str = "test",
 		max_docs: Optional[int] = None,
 		analyzer: Optional[callable] = None,
 	) -> "AGNewsDataset":

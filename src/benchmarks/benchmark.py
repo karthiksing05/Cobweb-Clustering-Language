@@ -82,7 +82,7 @@ class BenchmarkRunner:
 			BERTopic(
 				embedding_model=embedding_model,
                 umap_model=cobweb_umap_model,
-                hdbscan_model=BERTopicCobwebWrapper(cluster_level=5, min_cluster_size=5),
+                hdbscan_model=BERTopicCobwebWrapper(cluster_level=4, min_cluster_size=5),
                 vectorizer_model=vectorizer_model,
                 ctfidf_model=ctfidf_model
             )

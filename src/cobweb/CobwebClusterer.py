@@ -196,6 +196,26 @@ class CobwebClusterer:
 
         return training_labels
 
+    def _create_node_doc_assignment(self):
+        """
+        Recursively creates a mapping from node IDs to the list of document indices under that node.
+        """
+        node_doc_map = {}
+        node_child_map = {}
+        def _traverse(node):
+            if node not in node_doc_map:
+                node_doc_map[node] = []
+
+            if node.sentence_id is not None:
+                node_doc_map[node].extend(node.sentence_id)
+
+            for child in getattr(node, "children", []):
+                _traverse(child)
+                node_doc_map[node].extend(node_doc_map[child])
+                node_child_map.setdefault(node, []).append(child)
+        _traverse(self.tree.root)
+        return node_doc_map, node_child_map
+
     def predict_clusters(self, X):
         """
         Given a set of instances, predicts the cluster they belong to! Assumes that the passed in
