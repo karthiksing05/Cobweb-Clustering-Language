@@ -21,6 +21,6 @@ export PYTHONPATH=$(pwd)
 
 echo "Starting 20 NewsGroups Topic Modeling at $(date)"
 
-srun python src/benchmarks/benchmark.py 20newsgroups
+srun python src/benchmarks/benchmark.py 20newsgroups --test_hierarchical
 
 echo "20 NewsGroups Topic Modeling completed at $(date)"

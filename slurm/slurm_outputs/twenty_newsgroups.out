@@ -1,4 +1,4 @@
-Starting 20 NewsGroups Topic Modeling at Sun 21 Dec 2025 06:13:12 AM EST
+Starting 20 NewsGroups Topic Modeling at Sun 21 Dec 2025 12:57:09 PM EST
 
 Total number of leaf nodes: 7317
 
@@ -6,40 +6,85 @@ Number of nodes at each level:
   Level 0: 1 node(s)
   Level 1: 3 node(s)
   Level 2: 8 node(s)
-  Level 3: 21 node(s)
-  Level 4: 50 node(s)
-  Level 5: 119 node(s)
-  Level 6: 291 node(s)
-  Level 7: 701 node(s)
-  Level 8: 1409 node(s)
-  Level 9: 2233 node(s)
-  Level 10: 2811 node(s)
-  Level 11: 2492 node(s)
-  Level 12: 1541 node(s)
-  Level 13: 601 node(s)
-  Level 14: 115 node(s)
-  Level 15: 18 node(s)
-  Level 16: 2 node(s)
-  Level 17: 2 node(s)
+  Level 3: 17 node(s)
+  Level 4: 41 node(s)
+  Level 5: 93 node(s)
+  Level 6: 230 node(s)
+  Level 7: 561 node(s)
+  Level 8: 1192 node(s)
+  Level 9: 1931 node(s)
+  Level 10: 2696 node(s)
+  Level 11: 2656 node(s)
+  Level 12: 1828 node(s)
+  Level 13: 840 node(s)
+  Level 14: 265 node(s)
+  Level 15: 54 node(s)
+  Level 16: 4 node(s)
 Number of leaves at each level:
-  Level 5: 3 lea(f/ves)
-  Level 6: 16 lea(f/ves)
-  Level 7: 148 lea(f/ves)
-  Level 8: 525 lea(f/ves)
-  Level 9: 1095 lea(f/ves)
-  Level 10: 1759 lea(f/ves)
-  Level 11: 1830 lea(f/ves)
-  Level 12: 1268 lea(f/ves)
-  Level 13: 546 lea(f/ves)
-  Level 14: 107 lea(f/ves)
-  Level 15: 17 lea(f/ves)
-  Level 16: 1 lea(f/ves)
-  Level 17: 2 lea(f/ves)
+  Level 5: 1 lea(f/ves)
+  Level 6: 11 lea(f/ves)
+  Level 7: 89 lea(f/ves)
+  Level 8: 430 lea(f/ves)
+  Level 9: 845 lea(f/ves)
+  Level 10: 1596 lea(f/ves)
+  Level 11: 1869 lea(f/ves)
+  Level 12: 1461 lea(f/ves)
+  Level 13: 721 lea(f/ves)
+  Level 14: 238 lea(f/ves)
+  Level 15: 52 lea(f/ves)
+  Level 16: 4 lea(f/ves)
 
 Parent nodes by number of children:
- 3199 parent(s) with 2 child(ren)
- 1610 parent(s) with 3 child(ren)
- 272 parent(s) with 4 child(ren)
- 19 parent(s) with 5 child(ren)
- 1 parent(s) with 6 child(ren)
-20 NewsGroups Topic Modeling completed at Sun 21 Dec 2025 06:21:48 AM EST
+ 3212 parent(s) with 2 child(ren)
+ 1597 parent(s) with 3 child(ren)
+ 268 parent(s) with 4 child(ren)
+ 24 parent(s) with 5 child(ren)
+ 2 parent(s) with 6 child(ren)
+Model 0 (HDBSCAN) metrics: {'coherence_c_v': 0.5766001011205771, 'coherence_npmi': 0.04804915517678855, 'topic_diversity': 0.9, 'inter_topic_similarity': 0.4513057470321655}
+Model 1 (KMeans) metrics: {'coherence_c_v': 0.6552319124955125, 'coherence_npmi': 0.08096113062702878, 'topic_diversity': 0.826, 'inter_topic_similarity': 0.27366361021995544}
+Model 2 (BERTopicCobwebWrapper) metrics: {'coherence_c_v': 0.6412495546833605, 'coherence_npmi': 0.0930649428394367, 'topic_diversity': 0.8317073170731707, 'inter_topic_similarity': 0.2847086489200592}
+
+Total number of leaf nodes: 7317
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 4 node(s)
+  Level 2: 11 node(s)
+  Level 3: 25 node(s)
+  Level 4: 63 node(s)
+  Level 5: 147 node(s)
+  Level 6: 385 node(s)
+  Level 7: 927 node(s)
+  Level 8: 1875 node(s)
+  Level 9: 2833 node(s)
+  Level 10: 2853 node(s)
+  Level 11: 1963 node(s)
+  Level 12: 922 node(s)
+  Level 13: 295 node(s)
+  Level 14: 55 node(s)
+  Level 15: 9 node(s)
+  Level 16: 6 node(s)
+Number of leaves at each level:
+  Level 4: 1 lea(f/ves)
+  Level 6: 24 lea(f/ves)
+  Level 7: 199 lea(f/ves)
+  Level 8: 744 lea(f/ves)
+  Level 9: 1660 lea(f/ves)
+  Level 10: 2005 lea(f/ves)
+  Level 11: 1558 lea(f/ves)
+  Level 12: 792 lea(f/ves)
+  Level 13: 271 lea(f/ves)
+  Level 14: 51 lea(f/ves)
+  Level 15: 6 lea(f/ves)
+  Level 16: 6 lea(f/ves)
+
+Parent nodes by number of children:
+ 3129 parent(s) with 2 child(ren)
+ 1624 parent(s) with 3 child(ren)
+ 279 parent(s) with 4 child(ren)
+ 23 parent(s) with 5 child(ren)
+ 2 parent(s) with 6 child(ren)
+Hierarchical Model 0 (HDBSCAN) metrics: {'hier_coherence_npmi': 0.1751731256600117, 'hier_topic_uniqueness': 0.9, 'hier_topic_diversity': 0.9, 'hier_topic_specialization': 0.12080792324862649, 'hier_affinity_child': 0.8044986128807068, 'hier_affinity_non_child': 0.0, 'hier_coherence_clnpmi': 0.04493474961960795}
+Hierarchical Model 1 (KMeans) metrics: {'hier_coherence_npmi': 0.19898695340124586, 'hier_topic_uniqueness': 0.8036587957497048, 'hier_topic_diversity': 0.8036587957497048, 'hier_topic_specialization': 0.2217128136054985, 'hier_affinity_child': 0.8017793893814087, 'hier_affinity_non_child': 0.35230135917663574, 'hier_coherence_clnpmi': 0.13751396655420006}
+Hierarchical Model 2 (BERTopicCobwebWrapper) metrics: {'hier_coherence_npmi': 0.1990393391996834, 'hier_topic_uniqueness': 0.7278293928293929, 'hier_topic_diversity': 0.7278293928293929, 'hier_topic_specialization': 0.24104858732057063, 'hier_affinity_child': 0.8061278462409973, 'hier_affinity_non_child': 0.3296597898006439, 'hier_coherence_clnpmi': 0.12778231049912994}
+20 NewsGroups Topic Modeling completed at Sun 21 Dec 2025 01:13:09 PM EST
