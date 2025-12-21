@@ -1,0 +1,45 @@
+Starting 20 NewsGroups Topic Modeling at Sat Dec 20 11:18:38 PM EST 2025
+
+Total number of leaf nodes: 11014
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 8 node(s)
+  Level 3: 21 node(s)
+  Level 4: 51 node(s)
+  Level 5: 125 node(s)
+  Level 6: 313 node(s)
+  Level 7: 780 node(s)
+  Level 8: 1817 node(s)
+  Level 9: 3318 node(s)
+  Level 10: 4496 node(s)
+  Level 11: 3989 node(s)
+  Level 12: 2372 node(s)
+  Level 13: 905 node(s)
+  Level 14: 211 node(s)
+  Level 15: 44 node(s)
+  Level 16: 8 node(s)
+  Level 17: 4 node(s)
+Number of leaves at each level:
+  Level 5: 1 lea(f/ves)
+  Level 6: 14 lea(f/ves)
+  Level 7: 90 lea(f/ves)
+  Level 8: 560 lea(f/ves)
+  Level 9: 1532 lea(f/ves)
+  Level 10: 2840 lea(f/ves)
+  Level 11: 2958 lea(f/ves)
+  Level 12: 1966 lea(f/ves)
+  Level 13: 811 lea(f/ves)
+  Level 14: 192 lea(f/ves)
+  Level 15: 40 lea(f/ves)
+  Level 16: 6 lea(f/ves)
+  Level 17: 4 lea(f/ves)
+
+Parent nodes by number of children:
+ 4458 parent(s) with 2 child(ren)
+ 2486 parent(s) with 3 child(ren)
+ 453 parent(s) with 4 child(ren)
+ 51 parent(s) with 5 child(ren)
+ 4 parent(s) with 6 child(ren)
+20 NewsGroups Topic Modeling completed at Sat Dec 20 11:27:41 PM EST 2025
