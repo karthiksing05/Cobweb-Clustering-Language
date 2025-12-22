@@ -58,8 +58,7 @@ class BenchmarkRunner:
 		and DBSCAN model types, and then extend to compare to DBSTREAM for an incremental benchmark.
         """
 		embedding_model = SentenceTransformer("all-roberta-large-v1")
-		umap_model = UMAP(n_neighbors=15, n_components=5, metric='cosine')
-		cobweb_umap_model = UMAP(n_neighbors=15, n_components=256, metric='cosine')
+		umap_model = UMAP(n_neighbors=15, n_components=128, metric='cosine')
 		vectorizer_model = CountVectorizer(stop_words="english")
 		ctfidf_model = ClassTfidfTransformer()
 
@@ -83,7 +82,7 @@ class BenchmarkRunner:
 			# Cobweb!!
 			BERTopic(
 				embedding_model=embedding_model,
-                umap_model=cobweb_umap_model,
+                umap_model=umap_model,
                 hdbscan_model=BERTopicCobwebWrapper(cluster_level=5, min_cluster_size=5),
                 vectorizer_model=vectorizer_model,
                 ctfidf_model=ctfidf_model
@@ -105,8 +104,8 @@ class BenchmarkRunner:
 			print(f"Model {idx} ({model.hdbscan_model.__class__.__name__}) metrics: {metrics}")
 		if self.run_hierarchical:
 				# Reuse the trained model instances returned by the non-hierarchical runner
-				trained_models = [entry["model"] for entry in results]
-				hierarchical_runner = BERTopicHierarchicalRunner(trained_models)
+			# trained_models = [entry["model"] for entry in results]
+			hierarchical_runner = BERTopicHierarchicalRunner(topic_models)
 			hierarchical_results = hierarchical_runner.run(dataset, top_n_words=self.top_n_words)
 			for idx, metrics in enumerate(hierarchical_results):
 				model = metrics.pop("model")
@@ -119,9 +118,9 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 	parser = argparse.ArgumentParser(description="Run BERTopic benchmarks")
 	parser.add_argument("dataset", help="Dataset to run: 20newsgroups | reuters | ag_news")
 	parser.add_argument("--max-docs", type=int, default=None, help="Optional limit on documents for quick runs")
-	parser.add_argument("--top-n-words", type=int, default=10, help="Top-N words per topic for metrics")
+	parser.add_argument("--top-n-words", type=int, default=15, help="Top-N words per topic for metrics")
 	parser.add_argument("--log-level", default="INFO", help="Logging level (DEBUG, INFO, WARNING, ERROR)")
-	parser.add_argument("--test_hierarchical", default=False, action="store_true", help="Whether to test hierarchical clustering models")
+	parser.add_argument("--test_hierarchical", default=True, action="store_true", help="Whether to test hierarchical clustering models")
 	return parser.parse_args(argv)
 
 

@@ -102,6 +102,47 @@ def compute_topic_diversity(topic_words: List[List[str]]) -> float:
 	return float(len(set(flat)) / len(flat))
 
 
+def compute_topic_pair_difference(words_a: List[str], words_b: List[str]) -> float:
+	"""Compute difference ratio between two topics' word lists.
+
+	Matches TraCo's pair difference: fraction of words that appear in
+	only one of the two topics, divided by the combined length.
+	"""
+	if not words_a and not words_b:
+		return 0.0
+	from collections import Counter
+	c = Counter()
+	c.update(words_a)
+	c.update(words_b)
+	unique_only = sum(1 for v in c.values() if v == 1)
+	denom = len(words_a) + len(words_b)
+	return float(unique_only / denom) if denom > 0 else 0.0
+
+
+def compute_group_td(groups: List[List[List[str]]]) -> float:
+	"""Compute average topic diversity across sibling groups.
+
+	Each group is a list of topics (each as a list of words). For a group,
+	count words across topics and compute the fraction that occur exactly once
+	divided by total tokens, then average across groups.
+	"""
+	if not groups:
+		return 0.0
+	group_scores: List[float] = []
+	from collections import Counter
+	for topics in groups:
+		flat = []
+		for tw in topics:
+			flat.extend(tw)
+		if not flat:
+			group_scores.append(0.0)
+			continue
+		cnt = Counter(flat)
+		unique_once = sum(1 for v in cnt.values() if v == 1)
+		group_scores.append(float(unique_once / len(flat)))
+	return float(np.mean(group_scores)) if group_scores else 0.0
+
+
 def compute_topic_specialization(topic_word: np.ndarray, doc_word: np.ndarray) -> float:
 	"""Compute specialization as 1 - cosine similarity to corpus vector."""
 	if topic_word.size == 0 or doc_word.size == 0:
@@ -419,6 +460,7 @@ class BERTopicHierarchicalRunner:
 
 			level_topic_mats: Dict[int, np.ndarray] = {}
 			level_topic_words: Dict[int, List[List[str]]] = {}
+			node_top_words: Dict[int, List[str]] = {}
 			for lvl in levels_sorted:
 				nodes = by_level.get(lvl, [])
 				mats = np.stack([node_dist[nid] for nid in nodes], axis=0) if nodes else np.zeros((0, len(vocab)))
@@ -426,6 +468,9 @@ class BERTopicHierarchicalRunner:
 				level_topic_words[lvl] = [
 					_top_words_from_dist(node_dist[nid], vocab, top_n_words) for nid in nodes
 				]
+				# also record per-node words for adjacency-based metrics
+				for idx, nid in enumerate(nodes):
+					node_top_words[nid] = level_topic_words[lvl][idx]
 
 			# Compute per-level metrics and average across levels
 			npmi_vals = []
@@ -470,6 +515,76 @@ class BERTopicHierarchicalRunner:
 				hier_non_child_aff = float("nan")
 				hier_clnpmi = float("nan")
 
+			# Additional TraCo-inspired metrics: PC_TD, PnonC_TD, Sibling_TD, Sibling clNPMI
+			adj = _build_adjacency(df)
+			pc_td_levels: List[float] = []
+			pnonc_td_levels: List[float] = []
+			sibling_td_levels: List[float] = []
+			sibling_clnpmi_levels: List[float] = []
+
+			for i_lvl in range(len(levels_sorted) - 1):
+				child_lvl = levels_sorted[i_lvl]
+				parent_lvl = levels_sorted[i_lvl + 1]
+
+				child_nodes = by_level.get(child_lvl, [])
+				parent_nodes = by_level.get(parent_lvl, [])
+				if not child_nodes or not parent_nodes:
+					continue
+
+				# Parent-Child Topic Diversity (average over actual edges)
+				pc_scores: List[float] = []
+				# Parent-non-Child Topic Diversity
+				pnonc_scores: List[float] = []
+				# Sibling TD and Sibling clNPMI per parent
+				sibling_group_scores: List[float] = []
+				sibling_group_clnpmi: List[float] = []
+
+				child_set = set(child_nodes)
+				for pid in parent_nodes:
+					children = [c for c in adj.get(pid, []) if c in child_set]
+					if children:
+						# PC_TD pairs
+						p_words = node_top_words.get(pid, [])
+						for cid in children:
+							c_words = node_top_words.get(cid, [])
+							pc_scores.append(compute_topic_pair_difference(p_words, c_words))
+
+						# Sibling TD for this parent
+						group_words = [node_top_words.get(cid, []) for cid in children]
+						sibling_group_scores.append(compute_group_td([group_words]))
+
+						# Sibling clNPMI for this parent (pairwise among children)
+						pair_vals: List[float] = []
+						for i_idx in range(len(children)):
+							for j_idx in range(i_idx + 1, len(children)):
+								d_i = node_dist.get(children[i_idx], np.zeros((len(vocab),), dtype=np.float32))
+								d_j = node_dist.get(children[j_idx], np.zeros((len(vocab),), dtype=np.float32))
+								pair_vals.append(compute_clnpmi(d_i, d_j, doc_word_binary))
+						if pair_vals:
+							sibling_group_clnpmi.append(float(np.mean(pair_vals)))
+
+					# Parent vs non-children at same child level
+					non_children = [c for c in child_nodes if c not in children]
+					if non_children:
+						p_words = node_top_words.get(pid, [])
+						for cid in non_children:
+							c_words = node_top_words.get(cid, [])
+							pnonc_scores.append(compute_topic_pair_difference(p_words, c_words))
+
+				if pc_scores:
+					pc_td_levels.append(float(np.mean(pc_scores)))
+				if pnonc_scores:
+					pnonc_td_levels.append(float(np.mean(pnonc_scores)))
+				if sibling_group_scores:
+					sibling_td_levels.append(float(np.mean(sibling_group_scores)))
+				if sibling_group_clnpmi:
+					sibling_clnpmi_levels.append(float(np.mean(sibling_group_clnpmi)))
+
+			hier_pc_td = float(np.mean(pc_td_levels)) if pc_td_levels else float("nan")
+			hier_pnonc_td = float(np.mean(pnonc_td_levels)) if pnonc_td_levels else float("nan")
+			hier_sibling_td = float(np.mean(sibling_td_levels)) if sibling_td_levels else float("nan")
+			hier_sibling_clnpmi = float(np.mean(sibling_clnpmi_levels)) if sibling_clnpmi_levels else float("nan")
+
 			metrics: Dict[str, float] = {
 				"hier_coherence_npmi": hier_npmi,
 				"hier_topic_uniqueness": hier_tu,
@@ -478,8 +593,10 @@ class BERTopicHierarchicalRunner:
 				"hier_affinity_child": hier_child_aff,
 				"hier_affinity_non_child": hier_non_child_aff,
 				"hier_coherence_clnpmi": hier_clnpmi,
+				"hier_PC_TD": hier_pc_td,
+				"hier_PnonC_TD": hier_pnonc_td,
+				"hier_sibling_TD": hier_sibling_td,
+				"hier_sibling_clnpmi": hier_sibling_clnpmi,
 			}
-
 			results.append({"model": model, **metrics})
-
 		return results
