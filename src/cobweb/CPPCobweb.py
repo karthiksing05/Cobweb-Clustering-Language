@@ -1099,7 +1099,7 @@ class CPPCobwebTree:
 				q.extend(curr.children)
 		return list(bl_nodes.values())
 
-	def analyze_structure(self):
+	def analyze_structure(self, verbose=True):
 		leaf_count = 0
 		level_counts = defaultdict(int)
 		leaf_counts = defaultdict(int)
@@ -1115,16 +1115,19 @@ class CPPCobwebTree:
 				child_hist[len(node.children)] += 1
 				for c in node.children:
 					q.append((c, lvl + 1))
-		print(f"\nTotal number of leaf nodes: {leaf_count}\n")
-		print("Number of nodes at each level:")
-		for lvl in sorted(level_counts.keys()):
-			print(f"  Level {lvl}: {level_counts[lvl]} node(s)")
-		print("Number of leaves at each level:")
-		for lvl in sorted(leaf_counts.keys()):
-			print(f"  Level {lvl}: {leaf_counts[lvl]} lea(f/ves)")
-		print("\nParent nodes by number of children:")
-		for n_children in sorted(child_hist.keys()):
-			print(f" {child_hist[n_children]} parent(s) with {n_children} child(ren)")
+		if verbose:
+			print(f"\nTotal number of leaf nodes: {leaf_count}\n")
+			print("Number of nodes at each level:")
+			for lvl in sorted(level_counts.keys()):
+				print(f"  Level {lvl}: {level_counts[lvl]} node(s)")
+			print("Number of leaves at each level:")
+			for lvl in sorted(leaf_counts.keys()):
+				print(f"  Level {lvl}: {leaf_counts[lvl]} lea(f/ves)")
+			print("\nParent nodes by number of children:")
+			for n_children in sorted(child_hist.keys()):
+				print(f" {child_hist[n_children]} parent(s) with {n_children} child(ren)")
+
+		return leaf_count, level_counts, leaf_counts, child_hist
 
 	# --- serialization (flat list like C++) ---
 	def dump_json(self, filename: str) -> None:

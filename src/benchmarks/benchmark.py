@@ -13,9 +13,10 @@ import logging
 import sys
 from typing import List
 
-from src.benchmarks.ag_news import AGNewsDataset
-from src.benchmarks.reuters_21578 import Reuters21578Dataset
-from src.benchmarks.twenty_newsgroups import TwentyNewsgroupsDataset
+from src.benchmarks.default.ag_news import AGNewsDataset
+from src.benchmarks.default.ml_arxiv import MLArXivDataset
+from src.benchmarks.default.reuters_21578 import Reuters21578Dataset
+from src.benchmarks.default.twenty_newsgroups import TwentyNewsgroupsDataset
 from src.utils.bertopic_utils import BERTopicRunner
 
 from src.cobweb.BERTopicCobwebWrapper import BERTopicCobwebWrapper
@@ -46,6 +47,8 @@ class BenchmarkRunner:
 			return Reuters21578Dataset.load(max_docs=self.max_docs)
 		if self.dataset in {"ag", "agnews", "ag-news"}:
 			return AGNewsDataset.load(max_docs=self.max_docs)
+		if self.dataset in {"ml_arxiv", "ml-arxiv", "mlarxiv", "ml-arxiv-papers"}:
+			return MLArXivDataset.load(max_docs=self.max_docs)
 		raise ValueError(f"Unsupported dataset '{self.dataset}'")
 
 	def _build_models(self):
@@ -56,8 +59,7 @@ class BenchmarkRunner:
 		and DBSCAN model types, and then extend to compare to DBSTREAM for an incremental benchmark.
         """
 		embedding_model = SentenceTransformer("all-roberta-large-v1")
-		umap_model = UMAP(n_neighbors=15, n_components=5, metric='cosine')
-		cobweb_umap_model = UMAP(n_neighbors=15, n_components=256, metric='cosine')
+		umap_model = UMAP(n_neighbors=15, n_components=512, metric='cosine')
 		vectorizer_model = CountVectorizer(stop_words="english")
 		ctfidf_model = ClassTfidfTransformer()
 
@@ -81,8 +83,8 @@ class BenchmarkRunner:
 			# Cobweb!!
 			BERTopic(
 				embedding_model=embedding_model,
-                umap_model=cobweb_umap_model,
-                hdbscan_model=BERTopicCobwebWrapper(cluster_level=5, min_cluster_size=5),
+                umap_model=umap_model,
+                hdbscan_model=BERTopicCobwebWrapper(cluster_level=4, min_cluster_size=5),
                 vectorizer_model=vectorizer_model,
                 ctfidf_model=ctfidf_model
             )
@@ -105,7 +107,7 @@ class BenchmarkRunner:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 	parser = argparse.ArgumentParser(description="Run BERTopic benchmarks")
-	parser.add_argument("dataset", help="Dataset to run: 20newsgroups | reuters | ag_news")
+	parser.add_argument("dataset", help="Dataset to run: 20newsgroups | reuters | ag_news | ml_arxiv")
 	parser.add_argument("--max-docs", type=int, default=None, help="Optional limit on documents for quick runs")
 	parser.add_argument("--top-n-words", type=int, default=10, help="Top-N words per topic for metrics")
 	parser.add_argument("--log-level", default="INFO", help="Logging level (DEBUG, INFO, WARNING, ERROR)")

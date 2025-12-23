@@ -6,7 +6,8 @@
 #SBATCH --exclude=spot,heistotron
 #SBATCH --output=Cobweb-Clustering-Language/slurm/slurm_outputs/ag_news.out
 #SBATCH --error=Cobweb-Clustering-Language/slurm/slurm_errors/ag_news.err
-#SBATCH --partition="tail-lab"
+#SBATCH --account="overcap"
+#SBATCH --partition="overcap"
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4

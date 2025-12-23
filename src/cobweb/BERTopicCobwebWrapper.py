@@ -14,9 +14,6 @@ So we merely need to create a labels list when we fit the predictor (and remembe
 that works for any leaves at the level we choose).
 """
 
-import torch
-import numpy as np
-
 from src.cobweb.CobwebClusterer import CobwebClusterer
 
 class BERTopicCobwebWrapper:
@@ -35,15 +32,13 @@ class BERTopicCobwebWrapper:
     def fit(self, X):
         """
         We're going to allow this script to experimentally calculate and save the prior variance,
-        initialize the Cobweb structure, and push all code to 
+        initialize the Cobweb structure, save all labels.
         """
         buffer_texts = ["NOTEXT" for i in range(len(X))]
 
-        empirical_prior_var = np.var(X, axis=0, ddof=0)
-
         self.cobweb = CobwebClusterer(
             transition_depth=self.cluster_level,
-            prior_var=empirical_prior_var,
+            prior_var=None,
             corpus=buffer_texts,
             corpus_embeddings=X
         )

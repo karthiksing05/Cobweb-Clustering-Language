@@ -1,1 +1,44 @@
-Starting AG News Topic Modeling at Sat 20 Dec 2025 11:47:57 PM EST
+Starting AG News Topic Modeling at Sun 21 Dec 2025 01:41:20 PM EST
+
+Total number of leaf nodes: 10000
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 2 node(s)
+  Level 2: 5 node(s)
+  Level 3: 13 node(s)
+  Level 4: 34 node(s)
+  Level 5: 85 node(s)
+  Level 6: 208 node(s)
+  Level 7: 489 node(s)
+  Level 8: 1024 node(s)
+  Level 9: 1921 node(s)
+  Level 10: 2918 node(s)
+  Level 11: 3384 node(s)
+  Level 12: 3076 node(s)
+  Level 13: 2148 node(s)
+  Level 14: 1102 node(s)
+  Level 15: 453 node(s)
+  Level 16: 124 node(s)
+  Level 17: 17 node(s)
+Number of leaves at each level:
+  Level 6: 6 lea(f/ves)
+  Level 7: 76 lea(f/ves)
+  Level 8: 265 lea(f/ves)
+  Level 9: 760 lea(f/ves)
+  Level 10: 1540 lea(f/ves)
+  Level 11: 2097 lea(f/ves)
+  Level 12: 2149 lea(f/ves)
+  Level 13: 1670 lea(f/ves)
+  Level 14: 907 lea(f/ves)
+  Level 15: 397 lea(f/ves)
+  Level 16: 116 lea(f/ves)
+  Level 17: 17 lea(f/ves)
+
+Parent nodes by number of children:
+ 4475 parent(s) with 2 child(ren)
+ 2114 parent(s) with 3 child(ren)
+ 366 parent(s) with 4 child(ren)
+ 47 parent(s) with 5 child(ren)
+ 2 parent(s) with 6 child(ren)
+AG News Topic Modeling completed at Sun 21 Dec 2025 01:49:59 PM EST

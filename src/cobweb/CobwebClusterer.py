@@ -114,7 +114,7 @@ class CobwebClusterer:
 
         self._cluster_index_valid = False
 
-    def _gather_clusters(self, high_count_thres=5):
+    def _gather_clusters(self, high_count_thres=5, transition_depth=None):
         """
         Helper function to create and initialize all clusters (and for leaves that do not yet have
         clusters, we can just set them to equal -1. 
@@ -132,10 +132,18 @@ class CobwebClusterer:
         if self._cluster_index_valid:
             return
         
-        self.transition_nodes = self.tree.categorize_transitions(
-            torch.ones(self.embedding_shape, device=self.device),
-            transition_depth=self.transition_depth, top_k=1e9
-        )
+        if self.transition_depth != -1:
+            self.transition_nodes = self.tree.categorize_transitions(
+                torch.ones(self.embedding_shape, device=self.device),
+                transition_depth=self.transition_depth, top_k=1e9
+            )
+        elif transition_depth:
+            self.transition_nodes = self.tree.categorize_transitions(
+                torch.ones(self.embedding_shape, device=self.device),
+                transition_depth=transition_depth, top_k=1e9
+            )
+        else:
+            raise Exception("transition_depth not passed in both constructor AND self._gather_clusters!")
     
         C = len(self.transition_nodes)
         D = self.transition_nodes[0].mean.numel()

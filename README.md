@@ -1,3 +1,3 @@
 # Cobweb Clustering with Language
 
-We propose Cobweb as a hierarchical and interpretable clustering algorithm for language with capabilities in approximate retrieval and 
+We propose Cobweb as a clustering algorithm for language with capabilities that allows us to build the first incremental, hierarchical, language-focused topic-model.

@@ -1,0 +1,45 @@
+Starting ML ArXiv Topic Modeling at Sun 21 Dec 2025 12:12:10 PM EST
+
+Total number of leaf nodes: 10000
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 7 node(s)
+  Level 3: 21 node(s)
+  Level 4: 52 node(s)
+  Level 5: 136 node(s)
+  Level 6: 323 node(s)
+  Level 7: 785 node(s)
+  Level 8: 1668 node(s)
+  Level 9: 2905 node(s)
+  Level 10: 3761 node(s)
+  Level 11: 3391 node(s)
+  Level 12: 2295 node(s)
+  Level 13: 1080 node(s)
+  Level 14: 280 node(s)
+  Level 15: 60 node(s)
+  Level 16: 11 node(s)
+  Level 17: 2 node(s)
+Number of leaves at each level:
+  Level 5: 6 lea(f/ves)
+  Level 6: 28 lea(f/ves)
+  Level 7: 144 lea(f/ves)
+  Level 8: 564 lea(f/ves)
+  Level 9: 1399 lea(f/ves)
+  Level 10: 2363 lea(f/ves)
+  Level 11: 2404 lea(f/ves)
+  Level 12: 1821 lea(f/ves)
+  Level 13: 951 lea(f/ves)
+  Level 14: 252 lea(f/ves)
+  Level 15: 56 lea(f/ves)
+  Level 16: 10 lea(f/ves)
+  Level 17: 2 lea(f/ves)
+
+Parent nodes by number of children:
+ 4073 parent(s) with 2 child(ren)
+ 2239 parent(s) with 3 child(ren)
+ 430 parent(s) with 4 child(ren)
+ 37 parent(s) with 5 child(ren)
+ 2 parent(s) with 6 child(ren)
+ML ArXiv Topic Modeling completed at Sun 21 Dec 2025 12:24:45 PM EST
