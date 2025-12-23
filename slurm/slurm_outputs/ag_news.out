@@ -1,47 +1,49 @@
-Starting AG News Topic Modeling at Mon 22 Dec 2025 12:04:27 PM EST
+Starting AG News Topic Modeling at Tue 23 Dec 2025 01:07:27 AM EST
 
 Total number of leaf nodes: 7600
 
 Number of nodes at each level:
   Level 0: 1 node(s)
-  Level 1: 3 node(s)
-  Level 2: 8 node(s)
-  Level 3: 20 node(s)
-  Level 4: 50 node(s)
-  Level 5: 125 node(s)
-  Level 6: 281 node(s)
-  Level 7: 652 node(s)
-  Level 8: 1329 node(s)
-  Level 9: 2178 node(s)
-  Level 10: 2607 node(s)
-  Level 11: 2483 node(s)
-  Level 12: 1769 node(s)
-  Level 13: 913 node(s)
-  Level 14: 318 node(s)
-  Level 15: 86 node(s)
+  Level 1: 2 node(s)
+  Level 2: 6 node(s)
+  Level 3: 15 node(s)
+  Level 4: 38 node(s)
+  Level 5: 94 node(s)
+  Level 6: 232 node(s)
+  Level 7: 536 node(s)
+  Level 8: 1203 node(s)
+  Level 9: 2207 node(s)
+  Level 10: 2769 node(s)
+  Level 11: 2662 node(s)
+  Level 12: 1826 node(s)
+  Level 13: 909 node(s)
+  Level 14: 278 node(s)
+  Level 15: 67 node(s)
   Level 16: 12 node(s)
 Number of leaves at each level:
-  Level 3: 1 lea(f/ves)
-  Level 5: 8 lea(f/ves)
-  Level 6: 24 lea(f/ves)
-  Level 7: 131 lea(f/ves)
-  Level 8: 478 lea(f/ves)
-  Level 9: 1128 lea(f/ves)
-  Level 10: 1579 lea(f/ves)
-  Level 11: 1736 lea(f/ves)
-  Level 12: 1371 lea(f/ves)
-  Level 13: 773 lea(f/ves)
-  Level 14: 279 lea(f/ves)
-  Level 15: 80 lea(f/ves)
+  Level 5: 1 lea(f/ves)
+  Level 6: 19 lea(f/ves)
+  Level 7: 76 lea(f/ves)
+  Level 8: 345 lea(f/ves)
+  Level 9: 1087 lea(f/ves)
+  Level 10: 1662 lea(f/ves)
+  Level 11: 1882 lea(f/ves)
+  Level 12: 1425 lea(f/ves)
+  Level 13: 784 lea(f/ves)
+  Level 14: 246 lea(f/ves)
+  Level 15: 61 lea(f/ves)
   Level 16: 12 lea(f/ves)
 
 Parent nodes by number of children:
- 3234 parent(s) with 2 child(ren)
- 1664 parent(s) with 3 child(ren)
- 312 parent(s) with 4 child(ren)
- 24 parent(s) with 5 child(ren)
- 1 parent(s) with 6 child(ren)
-Model 0 (HDBSCAN) metrics: {'coherence_c_v': 0.6752738178426324, 'coherence_npmi': 0.1438841257406559, 'topic_diversity': 0.8541176470588235, 'inter_topic_similarity': 0.17000654339790344}
-Model 1 (KMeans) metrics: {'coherence_c_v': 0.610506949646373, 'coherence_npmi': 0.09546436527485504, 'topic_diversity': 0.858, 'inter_topic_similarity': 0.25397083163261414}
-Model 2 (BERTopicCobwebWrapper) metrics: {'coherence_c_v': 0.5738339121857832, 'coherence_npmi': 0.059445152038873586, 'topic_diversity': 0.8216, 'inter_topic_similarity': 0.2010844200849533}
-AG News Topic Modeling completed at Mon 22 Dec 2025 12:10:28 PM EST
+ 3263 parent(s) with 2 child(ren)
+ 1682 parent(s) with 3 child(ren)
+ 278 parent(s) with 4 child(ren)
+ 32 parent(s) with 5 child(ren)
+ 2 parent(s) with 6 child(ren)
+Model 0 (HDBSCAN) metrics: {'coherence_c_v': 0.6685362931829657, 'coherence_npmi': 0.1428146911146273, 'topic_diversity': 0.8531645569620253, 'inter_topic_similarity': 0.16992951929569244}
+Model 1 (KMeans) metrics: {'coherence_c_v': 0.5885271319968265, 'coherence_npmi': 0.07285931287912337, 'topic_diversity': 0.846, 'inter_topic_similarity': 0.25032442808151245}
+Model 2 (BERTopicCobwebWrapper) metrics: {'coherence_c_v': 0.5812095512257472, 'coherence_npmi': 0.06739966748716736, 'topic_diversity': 0.8042553191489362, 'inter_topic_similarity': 0.22617118060588837}
+Hierarchical Model 0 (HDBSCAN) metrics: {'hier_coherence_npmi': 0.09246699262186192, 'hier_topic_uniqueness': 0.8185827748821047, 'hier_topic_diversity': 0.8185827748821047, 'hier_topic_specialization': 0.2866203064285153, 'hier_affinity_child': 0.7300034761428833, 'hier_affinity_non_child': 0.1811189204454422, 'hier_coherence_clnpmi': 0.0180330795751072, 'hier_PC_TD': 0.2659325396825397, 'hier_PnonC_TD': 0.8244298623252196, 'hier_sibling_TD': 0.9400686274509804, 'hier_sibling_clnpmi': 0.02362093334507602}
+Hierarchical Model 1 (KMeans) metrics: {'hier_coherence_npmi': 0.08528452206060874, 'hier_topic_uniqueness': 0.7727621832358674, 'hier_topic_diversity': 0.7727621832358674, 'hier_topic_specialization': 0.2491555442776001, 'hier_affinity_child': 0.7911347150802612, 'hier_affinity_non_child': 0.3054691553115845, 'hier_coherence_clnpmi': 0.015701424143816933, 'hier_PC_TD': 0.2662280701754386, 'hier_PnonC_TD': 0.7924680371432222, 'hier_sibling_TD': 0.8681578947368421, 'hier_sibling_clnpmi': 0.03131443138378622}
+Hierarchical Model 2 (BERTopicCobwebWrapper) metrics: {'hier_coherence_npmi': 0.09961574357489288, 'hier_topic_uniqueness': 0.7720794316007082, 'hier_topic_diversity': 0.7720794316007081, 'hier_topic_specialization': 0.27111340957114566, 'hier_affinity_child': 0.7670618891716003, 'hier_affinity_non_child': 0.24528223276138306, 'hier_coherence_clnpmi': 0.019047237517211855, 'hier_PC_TD': 0.26843167606803975, 'hier_PnonC_TD': 0.769853966994331, 'hier_sibling_TD': 0.9456611570247934, 'hier_sibling_clnpmi': 0.10009584235164648}
+AG News Topic Modeling completed at Tue 23 Dec 2025 01:13:40 AM EST

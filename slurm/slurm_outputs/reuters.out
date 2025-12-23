@@ -1,49 +1,55 @@
-Starting Reuters Topic Modeling at Mon 22 Dec 2025 11:52:30 AM EST
+Starting Reuters Topic Modeling at Tue 23 Dec 2025 12:25:23 AM EST
 
 Total number of leaf nodes: 10787
 
 Number of nodes at each level:
   Level 0: 1 node(s)
   Level 1: 3 node(s)
-  Level 2: 7 node(s)
+  Level 2: 6 node(s)
   Level 3: 18 node(s)
-  Level 4: 43 node(s)
-  Level 5: 105 node(s)
-  Level 6: 217 node(s)
-  Level 7: 474 node(s)
-  Level 8: 1031 node(s)
-  Level 9: 2033 node(s)
-  Level 10: 3173 node(s)
-  Level 11: 3894 node(s)
-  Level 12: 3462 node(s)
-  Level 13: 2210 node(s)
-  Level 14: 1068 node(s)
-  Level 15: 347 node(s)
-  Level 16: 79 node(s)
-  Level 17: 2 node(s)
+  Level 4: 45 node(s)
+  Level 5: 104 node(s)
+  Level 6: 214 node(s)
+  Level 7: 437 node(s)
+  Level 8: 929 node(s)
+  Level 9: 1871 node(s)
+  Level 10: 3081 node(s)
+  Level 11: 3723 node(s)
+  Level 12: 3502 node(s)
+  Level 13: 2278 node(s)
+  Level 14: 1159 node(s)
+  Level 15: 553 node(s)
+  Level 16: 205 node(s)
+  Level 17: 54 node(s)
+  Level 18: 6 node(s)
 Number of leaves at each level:
-  Level 4: 1 lea(f/ves)
+  Level 4: 3 lea(f/ves)
   Level 5: 15 lea(f/ves)
-  Level 6: 23 lea(f/ves)
-  Level 7: 66 lea(f/ves)
-  Level 8: 244 lea(f/ves)
-  Level 9: 790 lea(f/ves)
-  Level 10: 1614 lea(f/ves)
-  Level 11: 2448 lea(f/ves)
-  Level 12: 2538 lea(f/ves)
-  Level 13: 1748 lea(f/ves)
-  Level 14: 910 lea(f/ves)
-  Level 15: 310 lea(f/ves)
-  Level 16: 78 lea(f/ves)
-  Level 17: 2 lea(f/ves)
+  Level 6: 34 lea(f/ves)
+  Level 7: 60 lea(f/ves)
+  Level 8: 209 lea(f/ves)
+  Level 9: 685 lea(f/ves)
+  Level 10: 1575 lea(f/ves)
+  Level 11: 2266 lea(f/ves)
+  Level 12: 2532 lea(f/ves)
+  Level 13: 1785 lea(f/ves)
+  Level 14: 922 lea(f/ves)
+  Level 15: 463 lea(f/ves)
+  Level 16: 181 lea(f/ves)
+  Level 17: 51 lea(f/ves)
+  Level 18: 6 lea(f/ves)
 
 Parent nodes by number of children:
- 4509 parent(s) with 2 child(ren)
- 2402 parent(s) with 3 child(ren)
- 409 parent(s) with 4 child(ren)
- 54 parent(s) with 5 child(ren)
+ 4567 parent(s) with 2 child(ren)
+ 2350 parent(s) with 3 child(ren)
+ 429 parent(s) with 4 child(ren)
+ 49 parent(s) with 5 child(ren)
  6 parent(s) with 6 child(ren)
-Model 0 (HDBSCAN) metrics: {'coherence_c_v': 0.6695714704689303, 'coherence_npmi': 0.1878727948204663, 'topic_diversity': 0.5925373134328358, 'inter_topic_similarity': 0.4867570996284485}
-Model 1 (KMeans) metrics: {'coherence_c_v': 0.6528779850361134, 'coherence_npmi': 0.16328155292801924, 'topic_diversity': 0.54, 'inter_topic_similarity': 0.5179042816162109}
-Model 2 (BERTopicCobwebWrapper) metrics: {'coherence_c_v': 0.6575963236533569, 'coherence_npmi': 0.16692945822449223, 'topic_diversity': 0.4419047619047619, 'inter_topic_similarity': 0.4301261901855469}
-Reuters Topic Modeling completed at Mon 22 Dec 2025 12:04:25 PM EST
+ 1 parent(s) with 7 child(ren)
+Model 0 (HDBSCAN) metrics: {'coherence_c_v': 0.6531240577773645, 'coherence_npmi': 0.16911447252736764, 'topic_diversity': 0.6195121951219512, 'inter_topic_similarity': 0.4969416558742523}
+Model 1 (KMeans) metrics: {'coherence_c_v': 0.6618886241093723, 'coherence_npmi': 0.16574415307361756, 'topic_diversity': 0.554, 'inter_topic_similarity': 0.5136188864707947}
+Model 2 (BERTopicCobwebWrapper) metrics: {'coherence_c_v': 0.6141344406464962, 'coherence_npmi': 0.12920022805297127, 'topic_diversity': 0.5019230769230769, 'inter_topic_similarity': 0.42815566062927246}
+Hierarchical Model 0 (HDBSCAN) metrics: {'hier_coherence_npmi': 0.15856990766554724, 'hier_topic_uniqueness': 0.6893001382320137, 'hier_topic_diversity': 0.6893001382320137, 'hier_topic_specialization': 0.32533369066066836, 'hier_affinity_child': 0.8374383449554443, 'hier_affinity_non_child': 0.307855486869812, 'hier_coherence_clnpmi': 0.010489890312148684, 'hier_PC_TD': 0.23321339330334837, 'hier_PnonC_TD': 0.7302944211395479, 'hier_sibling_TD': 0.9190311986863712, 'hier_sibling_clnpmi': 0.08125958540145037}
+Hierarchical Model 1 (KMeans) metrics: {'hier_coherence_npmi': 0.1648606907761457, 'hier_topic_uniqueness': 0.7373315508021391, 'hier_topic_diversity': 0.7373315508021391, 'hier_topic_specialization': 0.3139707185463209, 'hier_affinity_child': 0.8575320839881897, 'hier_affinity_non_child': 0.31092706322669983, 'hier_coherence_clnpmi': -0.02014213259225455, 'hier_PC_TD': 0.15418024132730013, 'hier_PnonC_TD': 0.7074881238175856, 'hier_sibling_TD': 0.8943725490196078, 'hier_sibling_clnpmi': 0.08828036121393304}
+Hierarchical Model 2 (BERTopicCobwebWrapper) metrics: {'hier_coherence_npmi': 0.1254623262019132, 'hier_topic_uniqueness': 0.7486929736929737, 'hier_topic_diversity': 0.7486929736929737, 'hier_topic_specialization': 0.3459712623504996, 'hier_affinity_child': 0.8632500171661377, 'hier_affinity_non_child': 0.22436431050300598, 'hier_coherence_clnpmi': 0.024962965320535043, 'hier_PC_TD': 0.19130584515199903, 'hier_PnonC_TD': 0.7687159819356179, 'hier_sibling_TD': 0.9358346781423705, 'hier_sibling_clnpmi': 0.08166956954265224}
+Reuters Topic Modeling completed at Tue 23 Dec 2025 12:38:22 AM EST

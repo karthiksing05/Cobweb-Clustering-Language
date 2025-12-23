@@ -21,6 +21,6 @@ export PYTHONPATH=$(pwd)
 
 echo "Starting AG News Topic Modeling at $(date)"
 
-srun python src/benchmarks/benchmark.py agnews --max-docs 10000 --test_hierarchical True
+srun python src/benchmarks/benchmark.py agnews --max-docs 50000 --test_hierarchical --reverse_levels
 
 echo "AG News Topic Modeling completed at $(date)"

@@ -398,10 +398,18 @@ class BERTopicHierarchicalRunner:
 	to produce a hierarchy dataframe and evaluates metrics from the sibling repo.
 	"""
 
-	def __init__(self, topic_models: Sequence[BERTopic]):
+	def __init__(self, topic_models: Sequence[BERTopic], *, leaf_level_zero: bool = True, reverse_levels: bool = False):
+		"""Initialize hierarchical runner with level alignment options.
+
+		- leaf_level_zero: Leaves are treated as Level 0 for reporting (BERTopic default),
+		  matching TraCo's aligned convention.
+		- reverse_levels: When True, report per-level metrics from parents down to leaves.
+		"""
 		if not topic_models:
 			raise ValueError("Provide at least one BERTopic instance to BERTopicHierarchicalRunner")
 		self.topic_models = list(topic_models)
+		self.leaf_level_zero = bool(leaf_level_zero)
+		self.reverse_levels = bool(reverse_levels)
 
 	def run(
 		self,
@@ -458,6 +466,12 @@ class BERTopicHierarchicalRunner:
 			if max_level is not None:
 				levels_sorted = [lvl for lvl in levels_sorted if lvl <= max_level]
 
+			# Orientation control: keep ascending order for parent-child relations,
+			# but optionally reverse reporting order for per-level aggregation.
+			levels_for_scoring = list(levels_sorted)
+			if self.reverse_levels:
+				levels_for_scoring = list(reversed(levels_for_scoring))
+
 			level_topic_mats: Dict[int, np.ndarray] = {}
 			level_topic_words: Dict[int, List[List[str]]] = {}
 			node_top_words: Dict[int, List[str]] = {}
@@ -478,7 +492,7 @@ class BERTopicHierarchicalRunner:
 			td_vals = []
 			spec_vals = []
 
-			for lvl in levels_sorted:
+			for lvl in levels_for_scoring:
 				mats = level_topic_mats[lvl]
 				words_list = level_topic_words[lvl]
 				if mats.shape[0] == 0:

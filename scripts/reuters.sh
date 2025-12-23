@@ -21,6 +21,6 @@ export PYTHONPATH=$(pwd)
 
 echo "Starting Reuters Topic Modeling at $(date)"
 
-srun python src/benchmarks/benchmark.py reuters --test_hierarchical True
+srun python src/benchmarks/benchmark.py reuters --test_hierarchical --reverse_levels
 
 echo "Reuters Topic Modeling completed at $(date)"

@@ -35,11 +35,13 @@ logger = logging.getLogger(__name__)
 class BenchmarkRunner:
 	"""Dispatch datasets and run BERTopic benchmarks."""
 
-	def __init__(self, dataset: str, max_docs: int | None, top_n_words: int, run_hierarchical: bool = False):
+	def __init__(self, dataset: str, max_docs: int | None, top_n_words: int, run_hierarchical: bool = False, leaf_level_zero: bool = True, reverse_levels: bool = False):
 		self.dataset = dataset.lower()
 		self.max_docs = max_docs
 		self.top_n_words = top_n_words
 		self.run_hierarchical = run_hierarchical
+		self.leaf_level_zero = leaf_level_zero
+		self.reverse_levels = reverse_levels
 
 	def _load_dataset(self):
 		if self.dataset in {"20newsgroups", "newsgroups"}:
@@ -103,9 +105,13 @@ class BenchmarkRunner:
 			logger.info("Model %d (%s) metrics: %s", idx, model.hdbscan_model.__class__.__name__, metrics)
 			print(f"Model {idx} ({model.hdbscan_model.__class__.__name__}) metrics: {metrics}")
 		if self.run_hierarchical:
-				# Reuse the trained model instances returned by the non-hierarchical runner
+			# Reuse the trained model instances returned by the non-hierarchical runner
 			# trained_models = [entry["model"] for entry in results]
-			hierarchical_runner = BERTopicHierarchicalRunner(topic_models)
+			hierarchical_runner = BERTopicHierarchicalRunner(
+				topic_models,
+				leaf_level_zero=self.leaf_level_zero,
+				reverse_levels=self.reverse_levels,
+			)
 			hierarchical_results = hierarchical_runner.run(dataset, top_n_words=self.top_n_words)
 			for idx, metrics in enumerate(hierarchical_results):
 				model = metrics.pop("model")
@@ -121,6 +127,8 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 	parser.add_argument("--top-n-words", type=int, default=15, help="Top-N words per topic for metrics")
 	parser.add_argument("--log-level", default="INFO", help="Logging level (DEBUG, INFO, WARNING, ERROR)")
 	parser.add_argument("--test_hierarchical", default=True, action="store_true", help="Whether to test hierarchical clustering models")
+	parser.add_argument("--leaf_level_zero", default=True, action="store_true", help="Align hierarchy reporting so leaves map to Level 0 (default)")
+	parser.add_argument("--reverse_levels", default=False, action="store_true", help="Report hierarchical metrics from parents down to leaves")
 	return parser.parse_args(argv)
 
 
@@ -128,7 +136,14 @@ def main(argv: list[str] | None = None):
 	args = parse_args(argv)
 	logging.basicConfig(level=args.log_level.upper(), format="%(asctime)s %(levelname)s %(name)s: %(message)s")
 	logger.info("Starting benchmark for dataset=%s", args.dataset)
-	runner = BenchmarkRunner(dataset=args.dataset, max_docs=args.max_docs, top_n_words=args.top_n_words, run_hierarchical=args.test_hierarchical)
+	runner = BenchmarkRunner(
+		dataset=args.dataset,
+		max_docs=args.max_docs,
+		top_n_words=args.top_n_words,
+		run_hierarchical=args.test_hierarchical,
+		leaf_level_zero=args.leaf_level_zero,
+		reverse_levels=args.reverse_levels,
+	)
 	try:
 		runner.run()
 	except Exception as exc:

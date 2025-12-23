@@ -19,6 +19,6 @@ export PYTHONPATH=$(pwd)
 
 echo "Starting 20 NewsGroups Topic Modeling at $(date)"
 
-srun python src/benchmarks/benchmark.py 20newsgroups --test_hierarchical True
+srun python src/benchmarks/benchmark.py 20newsgroups --test_hierarchical --reverse_levels
 
 echo "20 NewsGroups Topic Modeling completed at $(date)"
