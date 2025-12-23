@@ -43340,3 +43340,1077 @@ To disable this warning, you can either:
 2025-12-23 09:08:38,202 INFO gensim.utils: Dictionary lifecycle event {'msg': "built Dictionary<11778 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2625 documents (total 42268 corpus positions)", 'datetime': '2025-12-23T09:08:38.202469', 'gensim': '4.4.0', 'python': '3.11.13 (main, Jun  5 2025, 13:12:00) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-187-generic-x86_64-with-glibc2.31', 'event': 'created'}
 2025-12-23 09:08:38,207 INFO gensim.topic_coherence.text_analysis: CorpusAccumulator accumulated stats from 1000 documents
 2025-12-23 09:08:38,210 INFO gensim.topic_coherence.text_analysis: CorpusAccumulator accumulated stats from 2000 documents
+2025-12-23 09:08:50,426 INFO src.utils.bertopic_utils: Partial fitting model BERTopic on batch starting 2625 (125 docs)
+/nethome/ksingara3/flash/miniconda3/envs/rag-cobweb/lib/python3.11/site-packages/bertopic/vectorizers/_ctfidf.py:82: RuntimeWarning:
+
+divide by zero encountered in divide
+
+2025-12-23 09:08:52,106 INFO gensim.corpora.dictionary: adding document #0 to Dictionary<0 unique tokens: []>
+2025-12-23 09:08:52,157 INFO gensim.corpora.dictionary: built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)
+2025-12-23 09:08:52,157 INFO gensim.utils: Dictionary lifecycle event {'msg': "built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)", 'datetime': '2025-12-23T09:08:52.157650', 'gensim': '4.4.0', 'python': '3.11.13 (main, Jun  5 2025, 13:12:00) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-187-generic-x86_64-with-glibc2.31', 'event': 'created'}
+2025-12-23 09:08:52,158 INFO gensim.topic_coherence.probability_estimation: using ParallelWordOccurrenceAccumulator<processes=63, batch_size=64> to estimate probabilities from sliding windows
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+2025-12-23 09:08:54,259 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,260 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,260 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,260 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,261 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,261 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,261 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,262 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,262 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,262 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,262 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,263 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,263 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,263 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,263 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,264 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,264 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,264 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,265 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,265 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,266 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,266 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,266 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,266 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,267 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,267 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,267 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,267 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,267 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,267 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,267 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,268 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,268 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,268 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,268 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,268 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,269 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,269 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,269 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,269 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,269 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,270 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,270 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,270 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,270 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,270 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,271 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,271 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,271 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,271 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,271 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,271 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,272 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,272 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,272 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,272 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,272 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,272 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,272 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,273 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,273 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,273 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,273 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,274 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,274 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,274 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,275 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,275 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,275 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,275 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,275 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,276 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,279 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,279 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:54,279 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,283 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,283 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,287 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,287 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,287 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,291 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,291 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,291 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,291 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,291 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,296 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,296 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,296 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,298 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,303 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,303 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,303 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,305 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,307 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,311 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,311 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,311 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,311 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,315 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,315 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,315 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,319 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,319 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,319 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,323 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,323 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,323 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,323 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,327 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,327 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,327 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,331 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,331 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,331 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,331 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,331 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,333 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,335 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,335 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,339 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,339 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,342 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,343 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,347 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,347 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:54,347 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:55,501 INFO gensim.topic_coherence.text_analysis: 63 accumulators retrieved from output queue
+2025-12-23 09:08:55,528 INFO gensim.topic_coherence.text_analysis: accumulated word occurrence stats for 2750 virtual documents
+2025-12-23 09:08:55,635 INFO gensim.corpora.dictionary: adding document #0 to Dictionary<0 unique tokens: []>
+2025-12-23 09:08:55,676 INFO gensim.corpora.dictionary: built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)
+2025-12-23 09:08:55,676 INFO gensim.utils: Dictionary lifecycle event {'msg': "built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)", 'datetime': '2025-12-23T09:08:55.676465', 'gensim': '4.4.0', 'python': '3.11.13 (main, Jun  5 2025, 13:12:00) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-187-generic-x86_64-with-glibc2.31', 'event': 'created'}
+2025-12-23 09:08:55,677 INFO gensim.topic_coherence.probability_estimation: using ParallelWordOccurrenceAccumulator<processes=63, batch_size=64> to estimate probabilities from sliding windows
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+2025-12-23 09:08:57,834 INFO gensim.topic_coherence.text_analysis: 1 batches submitted to accumulate stats from 64 documents (387 virtual)
+2025-12-23 09:08:57,835 INFO gensim.topic_coherence.text_analysis: 2 batches submitted to accumulate stats from 128 documents (938 virtual)
+2025-12-23 09:08:57,836 INFO gensim.topic_coherence.text_analysis: 3 batches submitted to accumulate stats from 192 documents (1479 virtual)
+2025-12-23 09:08:57,837 INFO gensim.topic_coherence.text_analysis: 4 batches submitted to accumulate stats from 256 documents (1967 virtual)
+2025-12-23 09:08:57,837 INFO gensim.topic_coherence.text_analysis: 5 batches submitted to accumulate stats from 320 documents (2473 virtual)
+2025-12-23 09:08:57,838 INFO gensim.topic_coherence.text_analysis: 6 batches submitted to accumulate stats from 384 documents (3019 virtual)
+2025-12-23 09:08:57,839 INFO gensim.topic_coherence.text_analysis: 7 batches submitted to accumulate stats from 448 documents (3575 virtual)
+2025-12-23 09:08:57,840 INFO gensim.topic_coherence.text_analysis: 8 batches submitted to accumulate stats from 512 documents (3986 virtual)
+2025-12-23 09:08:57,841 INFO gensim.topic_coherence.text_analysis: 9 batches submitted to accumulate stats from 576 documents (4412 virtual)
+2025-12-23 09:08:57,841 INFO gensim.topic_coherence.text_analysis: 10 batches submitted to accumulate stats from 640 documents (4895 virtual)
+2025-12-23 09:08:57,843 INFO gensim.topic_coherence.text_analysis: 11 batches submitted to accumulate stats from 704 documents (5387 virtual)
+2025-12-23 09:08:57,843 INFO gensim.topic_coherence.text_analysis: 12 batches submitted to accumulate stats from 768 documents (5869 virtual)
+2025-12-23 09:08:57,844 INFO gensim.topic_coherence.text_analysis: 13 batches submitted to accumulate stats from 832 documents (6315 virtual)
+2025-12-23 09:08:57,845 INFO gensim.topic_coherence.text_analysis: 14 batches submitted to accumulate stats from 896 documents (6736 virtual)
+2025-12-23 09:08:57,846 INFO gensim.topic_coherence.text_analysis: 15 batches submitted to accumulate stats from 960 documents (7165 virtual)
+2025-12-23 09:08:57,846 INFO gensim.topic_coherence.text_analysis: 16 batches submitted to accumulate stats from 1024 documents (7484 virtual)
+2025-12-23 09:08:57,847 INFO gensim.topic_coherence.text_analysis: 17 batches submitted to accumulate stats from 1088 documents (7898 virtual)
+2025-12-23 09:08:57,848 INFO gensim.topic_coherence.text_analysis: 18 batches submitted to accumulate stats from 1152 documents (8338 virtual)
+2025-12-23 09:08:57,848 INFO gensim.topic_coherence.text_analysis: 19 batches submitted to accumulate stats from 1216 documents (8692 virtual)
+2025-12-23 09:08:57,849 INFO gensim.topic_coherence.text_analysis: 20 batches submitted to accumulate stats from 1280 documents (8916 virtual)
+2025-12-23 09:08:57,849 INFO gensim.topic_coherence.text_analysis: 21 batches submitted to accumulate stats from 1344 documents (9216 virtual)
+2025-12-23 09:08:57,849 INFO gensim.topic_coherence.text_analysis: 22 batches submitted to accumulate stats from 1408 documents (9565 virtual)
+2025-12-23 09:08:57,850 INFO gensim.topic_coherence.text_analysis: 23 batches submitted to accumulate stats from 1472 documents (10088 virtual)
+2025-12-23 09:08:57,850 INFO gensim.topic_coherence.text_analysis: 24 batches submitted to accumulate stats from 1536 documents (10558 virtual)
+2025-12-23 09:08:57,851 INFO gensim.topic_coherence.text_analysis: 25 batches submitted to accumulate stats from 1600 documents (11067 virtual)
+2025-12-23 09:08:57,851 INFO gensim.topic_coherence.text_analysis: 26 batches submitted to accumulate stats from 1664 documents (11557 virtual)
+2025-12-23 09:08:57,852 INFO gensim.topic_coherence.text_analysis: 27 batches submitted to accumulate stats from 1728 documents (12045 virtual)
+2025-12-23 09:08:57,852 INFO gensim.topic_coherence.text_analysis: 28 batches submitted to accumulate stats from 1792 documents (12422 virtual)
+2025-12-23 09:08:57,853 INFO gensim.topic_coherence.text_analysis: 29 batches submitted to accumulate stats from 1856 documents (12803 virtual)
+2025-12-23 09:08:57,854 INFO gensim.topic_coherence.text_analysis: 30 batches submitted to accumulate stats from 1920 documents (13322 virtual)
+2025-12-23 09:08:57,854 INFO gensim.topic_coherence.text_analysis: 31 batches submitted to accumulate stats from 1984 documents (13774 virtual)
+2025-12-23 09:08:57,855 INFO gensim.topic_coherence.text_analysis: 32 batches submitted to accumulate stats from 2048 documents (14265 virtual)
+2025-12-23 09:08:57,856 INFO gensim.topic_coherence.text_analysis: 33 batches submitted to accumulate stats from 2112 documents (14670 virtual)
+2025-12-23 09:08:57,856 INFO gensim.topic_coherence.text_analysis: 34 batches submitted to accumulate stats from 2176 documents (15182 virtual)
+2025-12-23 09:08:57,857 INFO gensim.topic_coherence.text_analysis: 35 batches submitted to accumulate stats from 2240 documents (15557 virtual)
+2025-12-23 09:08:57,858 INFO gensim.topic_coherence.text_analysis: 36 batches submitted to accumulate stats from 2304 documents (16065 virtual)
+2025-12-23 09:08:57,858 INFO gensim.topic_coherence.text_analysis: 37 batches submitted to accumulate stats from 2368 documents (16555 virtual)
+2025-12-23 09:08:57,859 INFO gensim.topic_coherence.text_analysis: 38 batches submitted to accumulate stats from 2432 documents (17010 virtual)
+2025-12-23 09:08:57,860 INFO gensim.topic_coherence.text_analysis: 39 batches submitted to accumulate stats from 2496 documents (17571 virtual)
+2025-12-23 09:08:57,860 INFO gensim.topic_coherence.text_analysis: 40 batches submitted to accumulate stats from 2560 documents (18088 virtual)
+2025-12-23 09:08:57,861 INFO gensim.topic_coherence.text_analysis: 41 batches submitted to accumulate stats from 2624 documents (18634 virtual)
+2025-12-23 09:08:57,862 INFO gensim.topic_coherence.text_analysis: 42 batches submitted to accumulate stats from 2688 documents (19078 virtual)
+2025-12-23 09:08:57,862 INFO gensim.topic_coherence.text_analysis: 43 batches submitted to accumulate stats from 2752 documents (19499 virtual)
+2025-12-23 09:08:57,943 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,943 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,943 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,944 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,944 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,944 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,944 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,944 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,945 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,945 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,946 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,946 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,946 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,946 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,947 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,947 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,948 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,948 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,947 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,948 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,949 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,951 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,952 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,952 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,952 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,954 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,954 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,954 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,954 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,954 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,955 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,955 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,955 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,955 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,956 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,956 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,956 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,957 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,957 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,958 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,958 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,958 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,958 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,960 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,960 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,961 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,961 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,962 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,962 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,962 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,962 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,963 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,963 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,963 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,963 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,963 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,964 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,965 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,965 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,967 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,967 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,967 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,971 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,971 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,971 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,971 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,971 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,972 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,974 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,974 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,975 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,975 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,976 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,977 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,979 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,979 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,980 INFO gensim.topic_coherence.text_analysis: serializing accumulator to return to master...
+2025-12-23 09:08:57,981 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,983 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,983 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,983 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,983 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,983 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,987 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,987 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,987 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,987 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,987 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,987 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,991 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,991 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,991 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,995 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,995 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,995 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,995 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,998 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,998 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:57,998 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,003 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,003 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,003 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,003 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,007 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,007 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,007 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,007 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,011 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,011 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,011 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,014 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,015 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,019 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,021 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,023 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,023 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,023 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,023 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,023 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,023 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,024 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,027 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,031 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,035 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,035 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:58,059 INFO gensim.topic_coherence.text_analysis: accumulator serialized
+2025-12-23 09:08:59,218 INFO gensim.topic_coherence.text_analysis: 63 accumulators retrieved from output queue
+2025-12-23 09:08:59,244 INFO gensim.topic_coherence.text_analysis: accumulated word occurrence stats for 20463 virtual documents
+2025-12-23 09:08:59,332 INFO gensim.corpora.dictionary: adding document #0 to Dictionary<0 unique tokens: []>
+2025-12-23 09:08:59,368 INFO gensim.corpora.dictionary: built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)
+2025-12-23 09:08:59,368 INFO gensim.utils: Dictionary lifecycle event {'msg': "built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)", 'datetime': '2025-12-23T09:08:59.368143', 'gensim': '4.4.0', 'python': '3.11.13 (main, Jun  5 2025, 13:12:00) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-187-generic-x86_64-with-glibc2.31', 'event': 'created'}
+2025-12-23 09:08:59,372 INFO gensim.topic_coherence.text_analysis: CorpusAccumulator accumulated stats from 1000 documents
+2025-12-23 09:08:59,374 INFO gensim.topic_coherence.text_analysis: CorpusAccumulator accumulated stats from 2000 documents
+2025-12-23 09:09:12,058 INFO src.utils.bertopic_utils: Partial fitting model BERTopic on batch starting 2625 (125 docs)
+/nethome/ksingara3/flash/miniconda3/envs/rag-cobweb/lib/python3.11/site-packages/bertopic/vectorizers/_ctfidf.py:82: RuntimeWarning:
+
+divide by zero encountered in divide
+
+2025-12-23 09:09:12,950 INFO gensim.corpora.dictionary: adding document #0 to Dictionary<0 unique tokens: []>
+2025-12-23 09:09:12,987 INFO gensim.corpora.dictionary: built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)
+2025-12-23 09:09:12,987 INFO gensim.utils: Dictionary lifecycle event {'msg': "built Dictionary<12174 unique tokens: ['100', 'final', 'floorball', 'game', 'nations']...> from 2750 documents (total 44249 corpus positions)", 'datetime': '2025-12-23T09:09:12.987331', 'gensim': '4.4.0', 'python': '3.11.13 (main, Jun  5 2025, 13:12:00) [GCC 11.2.0]', 'platform': 'Linux-5.4.0-187-generic-x86_64-with-glibc2.31', 'event': 'created'}
+2025-12-23 09:09:12,988 INFO gensim.topic_coherence.probability_estimation: using ParallelWordOccurrenceAccumulator<processes=63, batch_size=64> to estimate probabilities from sliding windows
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
