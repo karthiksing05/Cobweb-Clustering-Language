@@ -22,6 +22,7 @@ import matplotlib.pyplot as plt
 from src.benchmarks.incremental.reuters_rcv1 import Reuters21578IncrementalDataset
 from src.benchmarks.incremental.stackexchange import StackExchangeIncrementalDataset
 from src.benchmarks.incremental.tweetner7 import TweetNER7IncrementalDataset
+from src.benchmarks.incremental.nytimes import NYTimesAnnotatedIncrementalDataset
 from src.utils.bertopic_utils import (
 	IncrementalBERTopicDataset,
 	IncrementalBERTopicRunner,
@@ -101,6 +102,8 @@ class IncrementalBenchmarkRunner:
 			return TweetNER7IncrementalDataset.load(batch_size=self.batch_size, first_batch_size=self.first_batch_size, max_docs=self.max_docs)
 		if self.dataset in {"stackexchange", "stack-exchange", "stack"}:
 			return StackExchangeIncrementalDataset.load(batch_size=self.batch_size, first_batch_size=self.first_batch_size, max_docs=self.max_docs)
+		if self.dataset in {"nytimes", "nyt", "nytimes_annotated", "nytimes-annotated"}:
+			return NYTimesAnnotatedIncrementalDataset.load(batch_size=self.batch_size, first_batch_size=self.first_batch_size, max_docs=self.max_docs)
 		raise ValueError(f"Unsupported dataset '{self.dataset}'")
 
 	def _build_models(self) -> Tuple[List, List[str]]:
@@ -206,7 +209,7 @@ class IncrementalBenchmarkRunner:
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 	parser = argparse.ArgumentParser(description="Run incremental BERTopic benchmarks")
-	parser.add_argument("dataset", help="Dataset to run: reuters_rcv1 | tweetner7 | stackexchange")
+	parser.add_argument("dataset", help="Dataset to run: reuters_rcv1 | tweetner7 | stackexchange | nytimes")
 	parser.add_argument("--batch-size", type=int, default=512, help="Documents per batch for partial-fit (after the first)")
 	parser.add_argument("--first-batch-size", type=int, default=None, help="Optional different size for the first batch")
 	parser.add_argument("--max-docs", type=int, default=None, help="Optional limit on documents for quick runs")
