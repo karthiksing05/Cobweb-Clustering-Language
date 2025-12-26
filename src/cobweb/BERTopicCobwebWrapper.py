@@ -45,6 +45,8 @@ class BERTopicCobwebWrapper:
 
         self.labels_ = self.cobweb._gather_clusters(high_count_thres=self.min_cluster_size).cpu()
 
+        print(self.labels_)
+
         self.cobweb.tree.analyze_structure()
 
         return self

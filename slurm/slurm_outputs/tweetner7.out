@@ -1,1 +1,332 @@
-Starting TweetNER7 Incremental Topic Modeling at Tue 23 Dec 2025 08:53:27 AM EST
+Starting TweetNER7 Incremental Topic Modeling at Fri 26 Dec 2025 10:24:44 AM EST
+
+Total number of leaf nodes: 2000
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 9 node(s)
+  Level 3: 31 node(s)
+  Level 4: 155 node(s)
+  Level 5: 500 node(s)
+  Level 6: 845 node(s)
+  Level 7: 836 node(s)
+  Level 8: 338 node(s)
+  Level 9: 51 node(s)
+  Level 10: 14 node(s)
+Number of leaves at each level:
+  Level 4: 34 lea(f/ves)
+  Level 5: 289 lea(f/ves)
+  Level 6: 587 lea(f/ves)
+  Level 7: 710 lea(f/ves)
+  Level 8: 320 lea(f/ves)
+  Level 9: 46 lea(f/ves)
+  Level 10: 14 lea(f/ves)
+
+Parent nodes by number of children:
+ 228 parent(s) with 2 child(ren)
+ 285 parent(s) with 3 child(ren)
+ 89 parent(s) with 4 child(ren)
+ 79 parent(s) with 5 child(ren)
+ 45 parent(s) with 6 child(ren)
+ 28 parent(s) with 7 child(ren)
+ 16 parent(s) with 8 child(ren)
+ 7 parent(s) with 9 child(ren)
+ 4 parent(s) with 10 child(ren)
+ 1 parent(s) with 11 child(ren)
+ 1 parent(s) with 12 child(ren)
+9
+
+Total number of leaf nodes: 2125
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 9 node(s)
+  Level 3: 31 node(s)
+  Level 4: 152 node(s)
+  Level 5: 490 node(s)
+  Level 6: 855 node(s)
+  Level 7: 949 node(s)
+  Level 8: 385 node(s)
+  Level 9: 67 node(s)
+  Level 10: 20 node(s)
+Number of leaves at each level:
+  Level 4: 33 lea(f/ves)
+  Level 5: 277 lea(f/ves)
+  Level 6: 569 lea(f/ves)
+  Level 7: 804 lea(f/ves)
+  Level 8: 362 lea(f/ves)
+  Level 9: 60 lea(f/ves)
+  Level 10: 20 lea(f/ves)
+
+Parent nodes by number of children:
+ 250 parent(s) with 2 child(ren)
+ 302 parent(s) with 3 child(ren)
+ 103 parent(s) with 4 child(ren)
+ 70 parent(s) with 5 child(ren)
+ 48 parent(s) with 6 child(ren)
+ 28 parent(s) with 7 child(ren)
+ 23 parent(s) with 8 child(ren)
+ 6 parent(s) with 9 child(ren)
+ 6 parent(s) with 10 child(ren)
+ 1 parent(s) with 11 child(ren)
+9
+
+Total number of leaf nodes: 2250
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 9 node(s)
+  Level 3: 30 node(s)
+  Level 4: 146 node(s)
+  Level 5: 494 node(s)
+  Level 6: 864 node(s)
+  Level 7: 1020 node(s)
+  Level 8: 486 node(s)
+  Level 9: 62 node(s)
+  Level 10: 13 node(s)
+Number of leaves at each level:
+  Level 4: 30 lea(f/ves)
+  Level 5: 278 lea(f/ves)
+  Level 6: 568 lea(f/ves)
+  Level 7: 838 lea(f/ves)
+  Level 8: 466 lea(f/ves)
+  Level 9: 57 lea(f/ves)
+  Level 10: 13 lea(f/ves)
+
+Parent nodes by number of children:
+ 263 parent(s) with 2 child(ren)
+ 311 parent(s) with 3 child(ren)
+ 113 parent(s) with 4 child(ren)
+ 67 parent(s) with 5 child(ren)
+ 54 parent(s) with 6 child(ren)
+ 35 parent(s) with 7 child(ren)
+ 18 parent(s) with 8 child(ren)
+ 8 parent(s) with 9 child(ren)
+ 5 parent(s) with 10 child(ren)
+ 3 parent(s) with 11 child(ren)
+ 1 parent(s) with 13 child(ren)
+9
+
+Total number of leaf nodes: 2375
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 9 node(s)
+  Level 3: 29 node(s)
+  Level 4: 138 node(s)
+  Level 5: 485 node(s)
+  Level 6: 906 node(s)
+  Level 7: 1098 node(s)
+  Level 8: 549 node(s)
+  Level 9: 73 node(s)
+  Level 10: 13 node(s)
+Number of leaves at each level:
+  Level 4: 25 lea(f/ves)
+  Level 5: 259 lea(f/ves)
+  Level 6: 594 lea(f/ves)
+  Level 7: 891 lea(f/ves)
+  Level 8: 525 lea(f/ves)
+  Level 9: 68 lea(f/ves)
+  Level 10: 13 lea(f/ves)
+
+Parent nodes by number of children:
+ 279 parent(s) with 2 child(ren)
+ 326 parent(s) with 3 child(ren)
+ 123 parent(s) with 4 child(ren)
+ 71 parent(s) with 5 child(ren)
+ 54 parent(s) with 6 child(ren)
+ 40 parent(s) with 7 child(ren)
+ 17 parent(s) with 8 child(ren)
+ 11 parent(s) with 9 child(ren)
+ 7 parent(s) with 10 child(ren)
+ 1 parent(s) with 11 child(ren)
+9
+
+Total number of leaf nodes: 2500
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 9 node(s)
+  Level 3: 29 node(s)
+  Level 4: 132 node(s)
+  Level 5: 483 node(s)
+  Level 6: 979 node(s)
+  Level 7: 1172 node(s)
+  Level 8: 573 node(s)
+  Level 9: 90 node(s)
+  Level 10: 5 node(s)
+Number of leaves at each level:
+  Level 4: 22 lea(f/ves)
+  Level 5: 242 lea(f/ves)
+  Level 6: 638 lea(f/ves)
+  Level 7: 965 lea(f/ves)
+  Level 8: 540 lea(f/ves)
+  Level 9: 88 lea(f/ves)
+  Level 10: 5 lea(f/ves)
+
+Parent nodes by number of children:
+ 293 parent(s) with 2 child(ren)
+ 339 parent(s) with 3 child(ren)
+ 131 parent(s) with 4 child(ren)
+ 79 parent(s) with 5 child(ren)
+ 58 parent(s) with 6 child(ren)
+ 40 parent(s) with 7 child(ren)
+ 13 parent(s) with 8 child(ren)
+ 14 parent(s) with 9 child(ren)
+ 5 parent(s) with 10 child(ren)
+ 3 parent(s) with 11 child(ren)
+ 1 parent(s) with 12 child(ren)
+9
+
+Total number of leaf nodes: 2625
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 10 node(s)
+  Level 3: 34 node(s)
+  Level 4: 160 node(s)
+  Level 5: 505 node(s)
+  Level 6: 1007 node(s)
+  Level 7: 1162 node(s)
+  Level 8: 604 node(s)
+  Level 9: 149 node(s)
+  Level 10: 14 node(s)
+Number of leaves at each level:
+  Level 4: 39 lea(f/ves)
+  Level 5: 256 lea(f/ves)
+  Level 6: 665 lea(f/ves)
+  Level 7: 961 lea(f/ves)
+  Level 8: 546 lea(f/ves)
+  Level 9: 144 lea(f/ves)
+  Level 10: 14 lea(f/ves)
+
+Parent nodes by number of children:
+ 301 parent(s) with 2 child(ren)
+ 361 parent(s) with 3 child(ren)
+ 136 parent(s) with 4 child(ren)
+ 87 parent(s) with 5 child(ren)
+ 56 parent(s) with 6 child(ren)
+ 43 parent(s) with 7 child(ren)
+ 22 parent(s) with 8 child(ren)
+ 12 parent(s) with 9 child(ren)
+ 3 parent(s) with 10 child(ren)
+ 3 parent(s) with 11 child(ren)
+10
+
+Total number of leaf nodes: 2750
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 10 node(s)
+  Level 3: 33 node(s)
+  Level 4: 149 node(s)
+  Level 5: 524 node(s)
+  Level 6: 1038 node(s)
+  Level 7: 1241 node(s)
+  Level 8: 653 node(s)
+  Level 9: 158 node(s)
+  Level 10: 19 node(s)
+Number of leaves at each level:
+  Level 4: 29 lea(f/ves)
+  Level 5: 266 lea(f/ves)
+  Level 6: 674 lea(f/ves)
+  Level 7: 1013 lea(f/ves)
+  Level 8: 598 lea(f/ves)
+  Level 9: 151 lea(f/ves)
+  Level 10: 19 lea(f/ves)
+
+Parent nodes by number of children:
+ 318 parent(s) with 2 child(ren)
+ 385 parent(s) with 3 child(ren)
+ 143 parent(s) with 4 child(ren)
+ 94 parent(s) with 5 child(ren)
+ 55 parent(s) with 6 child(ren)
+ 41 parent(s) with 7 child(ren)
+ 26 parent(s) with 8 child(ren)
+ 9 parent(s) with 9 child(ren)
+ 4 parent(s) with 10 child(ren)
+ 3 parent(s) with 11 child(ren)
+ 1 parent(s) with 16 child(ren)
+10
+
+Total number of leaf nodes: 2875
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 10 node(s)
+  Level 3: 34 node(s)
+  Level 4: 155 node(s)
+  Level 5: 548 node(s)
+  Level 6: 1025 node(s)
+  Level 7: 1305 node(s)
+  Level 8: 723 node(s)
+  Level 9: 176 node(s)
+  Level 10: 14 node(s)
+Number of leaves at each level:
+  Level 4: 29 lea(f/ves)
+  Level 5: 292 lea(f/ves)
+  Level 6: 660 lea(f/ves)
+  Level 7: 1051 lea(f/ves)
+  Level 8: 658 lea(f/ves)
+  Level 9: 171 lea(f/ves)
+  Level 10: 14 lea(f/ves)
+
+Parent nodes by number of children:
+ 326 parent(s) with 2 child(ren)
+ 392 parent(s) with 3 child(ren)
+ 155 parent(s) with 4 child(ren)
+ 100 parent(s) with 5 child(ren)
+ 60 parent(s) with 6 child(ren)
+ 42 parent(s) with 7 child(ren)
+ 24 parent(s) with 8 child(ren)
+ 10 parent(s) with 9 child(ren)
+ 5 parent(s) with 10 child(ren)
+ 4 parent(s) with 11 child(ren)
+ 1 parent(s) with 15 child(ren)
+10
+
+Total number of leaf nodes: 3000
+
+Number of nodes at each level:
+  Level 0: 1 node(s)
+  Level 1: 3 node(s)
+  Level 2: 10 node(s)
+  Level 3: 36 node(s)
+  Level 4: 166 node(s)
+  Level 5: 559 node(s)
+  Level 6: 1049 node(s)
+  Level 7: 1295 node(s)
+  Level 8: 814 node(s)
+  Level 9: 210 node(s)
+  Level 10: 21 node(s)
+Number of leaves at each level:
+  Level 4: 35 lea(f/ves)
+  Level 5: 296 lea(f/ves)
+  Level 6: 689 lea(f/ves)
+  Level 7: 1021 lea(f/ves)
+  Level 8: 735 lea(f/ves)
+  Level 9: 203 lea(f/ves)
+  Level 10: 21 lea(f/ves)
+
+Parent nodes by number of children:
+ 342 parent(s) with 2 child(ren)
+ 404 parent(s) with 3 child(ren)
+ 162 parent(s) with 4 child(ren)
+ 103 parent(s) with 5 child(ren)
+ 60 parent(s) with 6 child(ren)
+ 45 parent(s) with 7 child(ren)
+ 25 parent(s) with 8 child(ren)
+ 10 parent(s) with 9 child(ren)
+ 5 parent(s) with 10 child(ren)
+ 7 parent(s) with 11 child(ren)
+ 1 parent(s) with 12 child(ren)
+10
+TweetNER7 Incremental Topic Modeling completed at Fri 26 Dec 2025 10:55:27 AM EST

@@ -22,6 +22,6 @@ export PYTHONPATH=$(pwd)
 
 echo "Starting StackExchange Incremental Topic Modeling at $(date)"
 
-srun python src/benchmarks/incremental_benchmark.py stackexchange --first-batch-size 500 --batch-size 125 --max-docs 5000
+srun python src/benchmarks/incremental_benchmark.py stackexchange --first-batch-size 2000 --batch-size 125 --max-docs 5000 --enable-refit
 
 echo "StackExchange Incremental Topic Modeling completed at $(date)"

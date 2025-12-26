@@ -145,6 +145,8 @@ class CobwebClusterer:
         else:
             raise Exception("transition_depth not passed in both constructor AND self._gather_clusters!")
     
+        print(len(self.transition_nodes))
+
         C = len(self.transition_nodes)
         D = self.transition_nodes[0].mean.numel()
         K = self.transition_nodes[0].label_counts.numel()

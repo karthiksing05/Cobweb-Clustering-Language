@@ -23,6 +23,7 @@ from src.cobweb.BERTopicCobwebWrapper import BERTopicCobwebWrapper
 
 from bertopic import BERTopic
 from umap import UMAP
+from bertopic.dimensionality import BaseDimensionalityReduction
 from hdbscan import HDBSCAN
 from sklearn.cluster import KMeans
 from sentence_transformers import SentenceTransformer
@@ -60,6 +61,7 @@ class BenchmarkRunner:
         """
 		embedding_model = SentenceTransformer("all-roberta-large-v1")
 		umap_model = UMAP(n_neighbors=15, n_components=512, metric='cosine')
+		empty_umap_model = BaseDimensionalityReduction()
 		vectorizer_model = CountVectorizer(stop_words="english")
 		ctfidf_model = ClassTfidfTransformer()
 
@@ -68,7 +70,7 @@ class BenchmarkRunner:
 			BERTopic(
 				embedding_model=embedding_model,
                 umap_model=umap_model,
-                hdbscan_model=HDBSCAN(min_cluster_size=15, metric="euclidean"),    
+                hdbscan_model=HDBSCAN(min_cluster_size=5, metric="euclidean"),    
                 vectorizer_model=vectorizer_model,
                 ctfidf_model=ctfidf_model
             ),
@@ -76,7 +78,7 @@ class BenchmarkRunner:
 			BERTopic(
 				embedding_model=embedding_model,
                 umap_model=umap_model,
-                hdbscan_model=KMeans(n_clusters=50),    
+                hdbscan_model=KMeans(n_clusters=20),    
                 vectorizer_model=vectorizer_model,
                 ctfidf_model=ctfidf_model
             ),

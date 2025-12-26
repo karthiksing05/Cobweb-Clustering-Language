@@ -22,6 +22,6 @@ export PYTHONPATH=$(pwd)
 
 echo "Starting Reuters Topic Modeling at $(date)"
 
-srun python src/benchmarks/benchmark.py reuters
+srun python src/benchmarks/benchmark.py reuters --max-docs 10000
 
 echo "Reuters Topic Modeling completed at $(date)"

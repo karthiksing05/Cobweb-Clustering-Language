@@ -28,6 +28,11 @@ Batch = List[str]
 
 logger = logging.getLogger(__name__)
 
+class MetricComputationError(RuntimeError):
+	"""Raised when a metric cannot be computed so runs can fail fast with context."""
+
+	def __init__(self, message: str):
+		super().__init__(message)
 
 def _default_analyzer() -> callable:
 	"""Return a default analyzer that mirrors CountVectorizer tokenization."""
@@ -154,6 +159,7 @@ class BERTopicRunner:
 			"topic_diversity": diversity,
 			"inter_topic_similarity": inter_sim,
 		}
+
 
 	@staticmethod
 	def _extract_topic_words(model: BERTopic, top_n: int) -> List[List[str]]:
@@ -347,8 +353,8 @@ class IncrementalBERTopicRunner:
 		prev_c_tf_idf: List[Optional[np.ndarray]] = [None] * len(self.topic_models)
 		prev_embeddings: List[Optional[np.ndarray]] = [None] * len(self.topic_models)
 
-		for batch_docs, batch_tokens, batch_corpus in zip(
-			dataset.iter_batches(), dataset.iter_token_batches(), dataset.iter_corpus_batches()
+		for step_idx, (batch_docs, batch_tokens, batch_corpus) in enumerate(
+			zip(dataset.iter_batches(), dataset.iter_token_batches(), dataset.iter_corpus_batches()), start=1
 		):
 			seen_start = len(seen_docs)
 			seen_docs.extend(batch_docs)
@@ -368,6 +374,9 @@ class IncrementalBERTopicRunner:
 					prev_c_tf_idf[idx],
 					prev_embeddings[idx],
 					prev_labels[idx],
+					batch_docs=batch_docs,
+					batch_tokens=batch_tokens,
+					batch_corpus=batch_corpus,
 				)
 
 				prev_topics[idx] = model.get_topics()
@@ -378,33 +387,43 @@ class IncrementalBERTopicRunner:
 
 				all_results[idx].append(metrics)
 
+
 		return all_results
 
 	def _compute_step_metrics(
 		self,
 		model: object,
-		docs: List[str],
-		tokens: List[List[str]],
-		corpus: List[List[Tuple[int, int]]],
+		docs_all: List[str],
+		tokens_all: List[List[str]],
+		corpus_all: List[List[Tuple[int, int]]],
 		prev_topics: Optional[Dict[int, List[Tuple[str, float]]]],
 		prev_c_tf_idf: Optional[np.ndarray],
 		prev_embeddings: Optional[np.ndarray],
 		prev_labels: Optional[np.ndarray],
+		batch_docs: Optional[List[str]] = None,
+		batch_tokens: Optional[List[List[str]]] = None,
+		batch_corpus: Optional[List[List[Tuple[int, int]]]] = None,
 	) -> Dict[str, float]:
 		current_topics = model.get_topics()
 		topic_words = self._extract_topic_words(current_topics, top_n=self.top_n_words)
-		coherence_cv = self._coherence(topic_words, tokens, corpus, measure="c_v")
-		coherence_npmi = self._coherence(topic_words, tokens, corpus, measure="c_npmi")
-		coherence_umass = self._coherence(topic_words, tokens, corpus, measure="u_mass")
+		# Cumulative metrics on all seen data
+		coherence_cv = self._coherence(topic_words, tokens_all, corpus_all, measure="c_v")
+		coherence_npmi = self._coherence(topic_words, tokens_all, corpus_all, measure="c_npmi")
+		coherence_umass = self._coherence(topic_words, tokens_all, corpus_all, measure="u_mass")
 		diversity = self._topic_diversity(topic_words)
 		inter_sim = self._inter_topic_similarity(current_topics, model)
 		intra_sim = self._intra_topic_similarity(current_topics, model)
 		redundancy = self._topic_redundancy(topic_words)
 
+		# Batch-only metrics on the latest batch corpus (if provided)
+		coherence_cv_batch = self._coherence(topic_words, batch_tokens or [], batch_corpus or [], measure="c_v") if batch_tokens is not None and batch_corpus is not None else float("nan")
+		coherence_npmi_batch = self._coherence(topic_words, batch_tokens or [], batch_corpus or [], measure="c_npmi") if batch_tokens is not None and batch_corpus is not None else float("nan")
+		coherence_umass_batch = self._coherence(topic_words, batch_tokens or [], batch_corpus or [], measure="u_mass") if batch_tokens is not None and batch_corpus is not None else float("nan")
+
 		# Predict current labels for temporal metrics
 		labels_curr = None
 		try:
-			labels_curr, _ = model.transform(docs)
+			labels_curr, _ = model.transform(docs_all)
 		except Exception:
 			labels_curr = None
 
@@ -427,6 +446,9 @@ class IncrementalBERTopicRunner:
 			"intra_topic_similarity": intra_sim,
 			"inter_topic_similarity": inter_sim,
 			"topic_redundancy": redundancy,
+			"coherence_c_v_batch": coherence_cv_batch,
+			"coherence_npmi_batch": coherence_npmi_batch,
+			"coherence_umass_batch": coherence_umass_batch,
 			"labels_curr": labels_curr,
 			**stability,
 		}
@@ -452,21 +474,16 @@ class IncrementalBERTopicRunner:
 		# Require at least two non-empty topics and some corpus before coherence.
 		filtered_topics = [tw for tw in topic_words if tw]
 		if len(filtered_topics) < 2 or not tokens or not corpus:
-			logger.debug(
-				"Skipping coherence %s: nonempty_topics=%d tokens=%d corpus=%d (raw_topics=%d)",
-				measure,
-				len(filtered_topics),
-				len(tokens),
-				len(corpus),
-				len(topic_words),
+			raise MetricComputationError(
+				f"Cannot compute coherence {measure}: nonempty_topics={len(filtered_topics)} raw_topics={len(topic_words)} tokens={len(tokens)} corpus={len(corpus)}"
 			)
-			return float("nan")
 		try:
 			dictionary = Dictionary(tokens)
 			dict_size = len(dictionary)
 			if dict_size == 0:
-				logger.debug("Skipping coherence %s: empty dictionary", measure)
-				return float("nan")
+				raise MetricComputationError(
+					f"Cannot compute coherence {measure}: empty dictionary after tokenization (tokens={len(tokens)})"
+				)
 			# Gensim coherence expects a list of tokens per topic. Coerce defensively
 			# to plain Python lists of non-empty strings and drop empty topics.
 			topics_for_coherence: List[List[str]] = []
@@ -483,13 +500,9 @@ class IncrementalBERTopicRunner:
 				if clean:
 					topics_for_coherence.append(clean)
 			if len(topics_for_coherence) < 2:
-				logger.debug(
-					"Skipping coherence %s after cleaning topics: nonempty_topics=%d (raw_lengths=%s)",
-					measure,
-					len(topics_for_coherence),
-					topic_lengths_before,
+				raise MetricComputationError(
+					f"Cannot compute coherence {measure}: topics dropped after cleaning; raw_lengths={topic_lengths_before}"
 				)
-				return float("nan")
 			coherence_model = CoherenceModel(
 				topics=topics_for_coherence,
 				texts=tokens,
@@ -499,19 +512,9 @@ class IncrementalBERTopicRunner:
 			)
 			return float(coherence_model.get_coherence())
 		except ValueError as exc:
-			logger.warning(
-				"Unable to compute %s coherence; returning NaN (%s) [nonempty_topics=%d tokens=%d corpus=%d dict=%d raw_lengths=%s cleaned_lengths=%s sample_topic=%s]",
-				measure,
-				exc,
-				len(filtered_topics),
-				len(tokens),
-				len(corpus),
-				dict_size if 'dict_size' in locals() else -1,
-				topic_lengths_before,
-				[list(map(len, topics_for_coherence)) if topics_for_coherence else []],
-				(topics_for_coherence[0][:5] if topics_for_coherence else []),
+			raise MetricComputationError(
+				f"Coherence {measure} failed: {exc}; nonempty_topics={len(filtered_topics)} tokens={len(tokens)} corpus={len(corpus)} dict={dict_size if 'dict_size' in locals() else -1} raw_lengths={topic_lengths_before} cleaned_lengths={[list(map(len, topics_for_coherence)) if 'topics_for_coherence' in locals() and topics_for_coherence else []]} sample_topic={(topics_for_coherence[0][:5] if 'topics_for_coherence' in locals() and topics_for_coherence else [])}"
 			)
-			return float("nan")
 
 	@staticmethod
 	def _topic_diversity(topic_words: List[List[str]]) -> float:
@@ -644,6 +647,16 @@ class IncrementalBERTopicRunner:
 				prev_vec = prev_ctfidf[prev_id]
 				curr_vec = curr_vec.toarray().ravel() if hasattr(curr_vec, "toarray") else np.asarray(curr_vec).ravel()
 				prev_vec = prev_vec.toarray().ravel() if hasattr(prev_vec, "toarray") else np.asarray(prev_vec).ravel()
+				# Skip if vocab sizes differ between refits
+				if curr_vec.shape != prev_vec.shape:
+					logger.debug(
+						"Skipping JS drift for topics (%s,%s) due to shape mismatch curr=%s prev=%s",
+						curr_id,
+						prev_id,
+						curr_vec.shape,
+						prev_vec.shape,
+					)
+					continue
 				# Avoid zero divisions
 				if np.sum(curr_vec) > 0 and np.sum(prev_vec) > 0:
 					curr_vec = curr_vec / np.sum(curr_vec)
@@ -691,6 +704,18 @@ class IncrementalBERTopicRunner:
 			sim_mat = _matrix(current_ctfidf, prev_ctfidf)
 		else:
 			return []
+
+		# Align topic id lists to similarity matrix dimensions to avoid indexing errors
+		# when BERTopic drops topics between steps. Extra topic IDs without embeddings
+		# are trimmed; this prefers stability over failing the run.
+		if sim_mat is not None:
+			max_curr, max_prev = sim_mat.shape
+			if len(curr_ids) > max_curr:
+				logger.debug("Trimming current topic ids from %s to %s to match embeddings", len(curr_ids), max_curr)
+				curr_ids = curr_ids[:max_curr]
+			if len(prev_ids) > max_prev:
+				logger.debug("Trimming previous topic ids from %s to %s to match embeddings", len(prev_ids), max_prev)
+				prev_ids = prev_ids[:max_prev]
 
 		matches: List[Tuple[int, int, float]] = []
 		used_prev = set()
