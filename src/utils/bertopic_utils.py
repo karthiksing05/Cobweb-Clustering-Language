@@ -28,11 +28,6 @@ Batch = List[str]
 
 logger = logging.getLogger(__name__)
 
-class MetricComputationError(RuntimeError):
-	"""Raised when a metric cannot be computed so runs can fail fast with context."""
-
-	def __init__(self, message: str):
-		super().__init__(message)
 
 def _default_analyzer() -> callable:
 	"""Return a default analyzer that mirrors CountVectorizer tokenization."""
@@ -159,7 +154,6 @@ class BERTopicRunner:
 			"topic_diversity": diversity,
 			"inter_topic_similarity": inter_sim,
 		}
-
 
 	@staticmethod
 	def _extract_topic_words(model: BERTopic, top_n: int) -> List[List[str]]:
@@ -474,16 +468,21 @@ class IncrementalBERTopicRunner:
 		# Require at least two non-empty topics and some corpus before coherence.
 		filtered_topics = [tw for tw in topic_words if tw]
 		if len(filtered_topics) < 2 or not tokens or not corpus:
-			raise MetricComputationError(
-				f"Cannot compute coherence {measure}: nonempty_topics={len(filtered_topics)} raw_topics={len(topic_words)} tokens={len(tokens)} corpus={len(corpus)}"
+			logger.debug(
+				"Skipping coherence %s: nonempty_topics=%d tokens=%d corpus=%d (raw_topics=%d)",
+				measure,
+				len(filtered_topics),
+				len(tokens),
+				len(corpus),
+				len(topic_words),
 			)
+			return float("nan")
 		try:
 			dictionary = Dictionary(tokens)
 			dict_size = len(dictionary)
 			if dict_size == 0:
-				raise MetricComputationError(
-					f"Cannot compute coherence {measure}: empty dictionary after tokenization (tokens={len(tokens)})"
-				)
+				logger.debug("Skipping coherence %s: empty dictionary", measure)
+				return float("nan")
 			# Gensim coherence expects a list of tokens per topic. Coerce defensively
 			# to plain Python lists of non-empty strings and drop empty topics.
 			topics_for_coherence: List[List[str]] = []
@@ -500,9 +499,13 @@ class IncrementalBERTopicRunner:
 				if clean:
 					topics_for_coherence.append(clean)
 			if len(topics_for_coherence) < 2:
-				raise MetricComputationError(
-					f"Cannot compute coherence {measure}: topics dropped after cleaning; raw_lengths={topic_lengths_before}"
+				logger.debug(
+					"Skipping coherence %s after cleaning topics: nonempty_topics=%d (raw_lengths=%s)",
+					measure,
+					len(topics_for_coherence),
+					topic_lengths_before,
 				)
+				return float("nan")
 			coherence_model = CoherenceModel(
 				topics=topics_for_coherence,
 				texts=tokens,
@@ -512,9 +515,19 @@ class IncrementalBERTopicRunner:
 			)
 			return float(coherence_model.get_coherence())
 		except ValueError as exc:
-			raise MetricComputationError(
-				f"Coherence {measure} failed: {exc}; nonempty_topics={len(filtered_topics)} tokens={len(tokens)} corpus={len(corpus)} dict={dict_size if 'dict_size' in locals() else -1} raw_lengths={topic_lengths_before} cleaned_lengths={[list(map(len, topics_for_coherence)) if 'topics_for_coherence' in locals() and topics_for_coherence else []]} sample_topic={(topics_for_coherence[0][:5] if 'topics_for_coherence' in locals() and topics_for_coherence else [])}"
+			logger.warning(
+				"Unable to compute %s coherence; returning NaN (%s) [nonempty_topics=%d tokens=%d corpus=%d dict=%d raw_lengths=%s cleaned_lengths=%s sample_topic=%s]",
+				measure,
+				exc,
+				len(filtered_topics),
+				len(tokens),
+				len(corpus),
+				dict_size if 'dict_size' in locals() else -1,
+				topic_lengths_before,
+				[list(map(len, topics_for_coherence)) if topics_for_coherence else []],
+				(topics_for_coherence[0][:5] if topics_for_coherence else []),
 			)
+			return float("nan")
 
 	@staticmethod
 	def _topic_diversity(topic_words: List[List[str]]) -> float:

@@ -6,8 +6,7 @@
 #SBATCH --exclude=spot,heistotron
 #SBATCH --output=Cobweb-Clustering-Language/slurm/slurm_outputs/stackexchange.out
 #SBATCH --error=Cobweb-Clustering-Language/slurm/slurm_errors/stackexchange.err
-#SBATCH --account="overcap"
-#SBATCH --partition="overcap"
+#SBATCH --partition="tail-lab"
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=4
@@ -22,6 +21,6 @@ export PYTHONPATH=$(pwd)
 
 echo "Starting StackExchange Incremental Topic Modeling at $(date)"
 
-srun python src/benchmarks/incremental_benchmark.py stackexchange --first-batch-size 2000 --batch-size 125 --max-docs 5000 --enable-refit
+srun python src/benchmarks/incremental_benchmark.py stackexchange --first-batch-size 750 --batch-size 125 --max-docs 5000 --enable-refit
 
 echo "StackExchange Incremental Topic Modeling completed at $(date)"

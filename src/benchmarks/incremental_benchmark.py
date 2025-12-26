@@ -13,7 +13,6 @@ import logging
 import sys
 from pathlib import Path
 from typing import List, Tuple
-import csv
 
 import matplotlib
 
@@ -199,7 +198,7 @@ class IncrementalBenchmarkRunner:
 
 	@staticmethod
 	def plot_metrics(results: List[List[dict]], labels: List[str], output_dir: Path, dataset: str):
-		output_dir = output_dir / dataset / "plots"
+		output_dir = output_dir / dataset
 		output_dir.mkdir(parents=True, exist_ok=True)
 		metrics = {
 			"coherence_c_v": "Topic coherence (c_v)",
@@ -236,45 +235,6 @@ class IncrementalBenchmarkRunner:
 			plt.savefig(out_path)
 			plt.close()
 
-	@staticmethod
-	def save_tables(results: List[List[dict]], labels: List[str], output_dir: Path, dataset: str):
-		tables_dir = output_dir / dataset / "tables"
-		tables_dir.mkdir(parents=True, exist_ok=True)
-		metrics = {
-			"coherence_c_v": "Topic coherence (c_v)",
-			"coherence_npmi": "Topic coherence (NPMI)",
-			"coherence_umass": "Topic coherence (c_umass)",
-			"coherence_c_v_batch": "Batch topic coherence (c_v)",
-			"coherence_npmi_batch": "Batch topic coherence (NPMI)",
-			"coherence_umass_batch": "Batch topic coherence (c_umass)",
-			"topic_diversity": "Topic diversity",
-			"intra_topic_similarity": "Intra-topic similarity",
-			"inter_topic_similarity": "Inter-topic similarity",
-			"topic_redundancy": "Topic redundancy",
-			"topic_stability_nmi": "Temporal stability (NMI)",
-			"topic_stability_ari": "Temporal stability (ARI)",
-			"word_overlap_stability": "Word overlap stability",
-			"topic_retention_rate": "Topic retention rate",
-			"topic_centroid_drift": "Topic centroid drift",
-			"topic_word_drift": "Topic word drift",
-		}
-
-		max_batches = max(len(model_results) for model_results in results)
-		for metric_key, title in metrics.items():
-			csv_path = tables_dir / f"{metric_key}.csv"
-			with csv_path.open("w", newline="") as csvfile:
-				writer = csv.writer(csvfile)
-				headers = ["batch_index"] + labels
-				writer.writerow(headers)
-				for batch_idx in range(max_batches):
-					row = [batch_idx + 1]
-					for model_results in results:
-						if batch_idx < len(model_results):
-							row.append(model_results[batch_idx].get(metric_key, float("nan")))
-						else:
-							row.append(float("nan"))
-					writer.writerow(row)
-
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 	parser = argparse.ArgumentParser(description="Run incremental BERTopic benchmarks")
@@ -309,9 +269,7 @@ def main(argv: list[str] | None = None):
 			results, labels = runner.run()
 			plot_dir = Path(args.plot_dir)
 			IncrementalBenchmarkRunner.plot_metrics(results, labels, plot_dir, dataset=args.dataset)
-			IncrementalBenchmarkRunner.save_tables(results, labels, plot_dir, dataset=args.dataset)
-			logger.info("Saved per-batch metric plots to %s", plot_dir / args.dataset / "plots")
-			logger.info("Saved per-batch metric tables to %s", plot_dir / args.dataset / "tables")
+			logger.info("Saved per-batch metric plots to %s", plot_dir / args.dataset)
 	except Exception as exc:
 		logger.error("Benchmark failed: %s", exc)
 		raise
